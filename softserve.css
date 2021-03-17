@@ -626,15 +626,16 @@ input:not([type]),
 textarea,
 select {
   -webkit-appearance: none;
-  background-color: var(--background-color-faded);
-  border: 0;
-  border-left: var(--border-radius-sm) solid var(--border-color);
-  border-radius: var(--border-radius-sm) var(--border-radius) var(--border-radius) var(--border-radius-sm);
-  padding: var(--spacer-2) var(--spacer-3);
-  color: var(--font-color-faded);
   height: 40px;
   width: 100%;
   cursor: pointer;
+  border: 0;
+  border-left: var(--border-radius-sm) solid var(--border-color);
+  border-radius: var(--border-radius-sm) var(--border-radius) var(--border-radius) var(--border-radius-sm);
+  background-color: var(--background-color-faded);
+  color: var(--font-color-faded);
+  font-weight: var(--font-weight);
+  padding: var(--spacer-2) var(--spacer-3);
   transition: border-color var(--transition-time) ease-in-out;
 }
 
