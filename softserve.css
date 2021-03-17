@@ -495,116 +495,6 @@ th:last-child {
 }
 
 
-/* 🍦 Buttons
-================================================================== */
-
-/* Global button style */
-.btn {
-  background-color: var(--primary-accent);
-  border: 1px solid var(--primary-accent);
-  border-radius: var(--border-radius);
-  color: var(--primary-accent-font) !important;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 500;
-  letter-spacing: 1px;
-  height: 40px;
-  padding: var(--spacer-3) var(--spacer-4);
-  text-transform: uppercase;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: 
-    color var(--transition-time) ease-in-out,
-    background-color var(--transition-time) ease-in-out,
-    border-color var(--transition-time) ease-in-out;
-}
-
-.btn:focus, 
-.btn:hover {
-  background-color: var(--secondary-accent) !important;
-  border-color: var(--secondary-accent) !important;
-  color: var(--secondary-accent-font) !important;
-  outline: 0;
-}
-
-/* Normal Outline */
-.btn-outline{
-  background-color: transparent;
-  color: var(--primary-accent) !important;
-}
-
-/* Secondary Solid */
-.btn-secondary {
-  background-color: var(--secondary-accent);
-  border-color: var(--secondary-accent);
-  color: var(--secondary-accent-font) !important;
-  outline: 0;
-}
-
-/* Secondary Outline */
-.btn-outline-secondary{
-  background-color: transparent;
-  color: var(--secondary-accent) !important;
-  border-color: var(--secondary-accent) !important;
-}
-
-.btn-outline-secondary:focus,
-.btn-outline-secondary:hover,
-.btn-secondary:focus, 
-.btn-secondary:hover,
-.btn-outline:focus, 
-.btn-outline:hover {
-  background-color: var(--primary-accent) !important;
-  border-color: var(--primary-accent) !important;
-  color: var(--primary-accent-color) !important;
-}
-
-/* Normal Link */
-.btn-link{
-  background-color: transparent;
-  border-color: transparent;
-  color: var(--primary-accent) !important;
-}
-
-.btn-link:focus, 
-.btn-link:hover {
-  background-color: transparent;
-  border-color: transparent;
-  color: var(--secondary-accent) !important;
-}
-
-/* Secondary Link */
-.btn-link-secondary{
-  background-color: transparent;
-  border-color: transparent;
-  color: var(--secondary-accent) !important;
-}
-
-.btn-link-secondary:focus, 
-.btn-link-secondary:hover {
-  background-color: transparent;
-  border-color: transparent;
-  color: var(--primary-accent) !important;
-}
-
-/* Disable Buttons */
-.btn[disabled],
-.btn-outline[disabled],
-.btn-link[disabled] {
-  cursor: default;
-  opacity: .5;
-  pointer-events: none;
-}
-
-/* Badge Type */
-.btn-badge{
-  padding: calc(var(--spacer-1) / 2) var(--spacer-1);
-  font-size: .9rem;
-  height: auto;
-}
-
-
 /* 🍦 Inputs
 ================================================================== */
 
@@ -678,6 +568,115 @@ legend {
 fieldset {
   border-width: 0;
   padding: 0;
+}
+
+
+/* 🍦 Buttons
+================================================================== */
+
+/* Global button style */
+.btn {
+  background-color: var(--primary-accent);
+  border: 1px solid var(--primary-accent);
+  border-radius: var(--border-radius);
+  color: var(--primary-accent-font) !important;
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 1px;
+  font: inherit;
+  font-weight: var(--font-weight);
+  font-size: var(--body-font-size);
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: var(--spacer-2) var(--spacer-4) !important;
+  transition: 
+    color var(--transition-time) ease-in-out,
+    background-color var(--transition-time) ease-in-out,
+    border-color var(--transition-time) ease-in-out;
+}
+
+.btn:focus, 
+.btn:hover {
+  background-color: var(--secondary-accent) !important;
+  border-color: var(--secondary-accent) !important;
+  color: var(--secondary-accent-font) !important;
+  outline: 0;
+}
+
+/* Normal Outline */
+.btn-outline{
+  background-color: transparent;
+  color: var(--primary-accent) !important;
+}
+
+/* Secondary Solid */
+.btn-secondary {
+  background-color: var(--secondary-accent);
+  border-color: var(--secondary-accent);
+  color: var(--secondary-accent-font) !important;
+  outline: 0;
+}
+
+/* Secondary Outline */
+.btn-outline-secondary{
+  background-color: transparent;
+  color: var(--secondary-accent) !important;
+  border-color: var(--secondary-accent) !important;
+}
+
+.btn-outline-secondary:focus,
+.btn-outline-secondary:hover,
+.btn-secondary:focus, 
+.btn-secondary:hover,
+.btn-outline:focus, 
+.btn-outline:hover {
+  background-color: var(--primary-accent) !important;
+  border-color: var(--primary-accent) !important;
+  color: var(--primary-accent-color) !important;
+}
+
+/* Normal Link */
+.btn-link{
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: var(--primary-accent) !important;
+}
+
+.btn-link:focus, 
+.btn-link:hover {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: var(--secondary-accent) !important;
+}
+
+/* Secondary Link */
+.btn-link-secondary{
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: var(--secondary-accent) !important;
+}
+
+.btn-link-secondary:focus, 
+.btn-link-secondary:hover {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: var(--primary-accent) !important;
+}
+
+/* Disable Buttons */
+.btn[disabled],
+.btn-outline[disabled],
+.btn-link[disabled] {
+  cursor: default;
+  opacity: .5;
+  pointer-events: none;
+}
+
+/* Badge Type */
+.btn-badge{
+  padding: calc(var(--spacer-1) / 2) var(--spacer-1) !important;
+  font-size: .9rem;
 }
 
 
@@ -928,14 +927,6 @@ fieldset {
   opacity: 1;
 }
 
-[data-tooltip]:before,
-[data-tooltip]:after,
-.tooltip:before,
-.tooltip:after {
-  bottom: 110%;
-  left: 50%;
-}
-
 .tooltip:before,
 [data-tooltip]:before {
   z-index: 1001;
@@ -945,6 +936,8 @@ fieldset {
   content: "";
   margin-left: -6px;
   margin-bottom: -12px;
+  bottom: 110%;
+  left: 50%;
   border-top-color: var(--font-color);
   border-top-color: var(--font-color);
 }
@@ -954,6 +947,8 @@ fieldset {
   z-index: 1000;
   padding: 8px;
   width: 250px;
+  bottom: 110%;
+  left: 50%;
   background-color: var(--font-color);
   background-color: var(--font-color);
   color: var(--background-color);
