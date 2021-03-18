@@ -56,7 +56,7 @@
         height: calc(100vh - 60px);
         background-color: var(--background-color-faded);
         border-bottom: 1px solid var(--border-color);
-        background-image: url(https://images.unsplash.com/photo-1505976311692-e64b8bbd6cfa);
+        background-image: url(https://i.imgur.com/WjaNkid.jpg);
         background-attachment: fixed;
         background-size: cover;
         background-position: center;
@@ -100,7 +100,7 @@
             <a class="nav-link" href="#buttons">Buttons</a>
             <a class="nav-link" href="#card">Card</a>
             <div class="dropdown">
-              <a class="nav-link">Bootstrap JS <i class="fal fa-chevron-down nav-icon"></i></a>
+              <a class="nav-link" href="#collapse">Bootstrap JS <i class="fal fa-chevron-down nav-icon"></i></a>
               <div class="dropdown-menu">
                 <a class="nav-link" href="#collapse">Collapse</a>
                 <a class="nav-link" href="#modal">Modal</a>
@@ -109,14 +109,7 @@
             </div>
             <a class="nav-link" href="#tooltip">Tooltip</a>
             <a class="nav-link" href="#navbar">Navbar</a>
-            <div class="dropdown">
-              <a class="nav-link">Quick Styles <i class="fal fa-chevron-down nav-icon"></i></a>
-              <div class="dropdown-menu">
-                <a class="nav-link" href="#backgrounds">Backgrounds</a>
-                <a class="nav-link" href="#texts">Texts</a>
-                <a class="nav-link" href="#borders">Borders</a>
-              </div>
-            </div>
+            <a class="nav-link" href="#quick-styles">Quick Styles</a>
             <a class="nav-link" href="#utility">Utility</a>
             <a class="nav-link" href="#forms">Forms</a>
             <a class="nav-link" href="#grid">Grid</a>
@@ -130,7 +123,7 @@
     <div class="section" id="getting-started">
       <h1 class="text-primary">Getting Started</h1>
       <p>I made this for me, mostly, and for other people who aren't super code savvy but need to throw together a site for whatever reason. A nice boilerplate to work on but also a good enough framework to just make a whole (lite) site with.</p>
-      <p>No need for compilers, it's just straight CSS (although it might look jank in some browsers. Fuck IE8.)</p>
+      <p>No need for compilers, it's just straight CSS (although it might look a little weird in some browsers.)</p>
       <p>Uses CSS variables so you can quickly style and go.</p>
       <p>Inspired by and utilized techniques from <a href="https://milligram.io/">Milligram.CSS</a>, <a href="https://jenil.github.io/chota/">Chota.CSS</a>, and the <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap 4 Framework</a>.</p>
       <hr>
@@ -146,7 +139,7 @@
       <hr>
       <h4 class="text-muted">CDN</h4>
       <p>Just the CSS</p>
-      <pre style="user-select: all;"><<i></i>link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cheeriko/softserve/softserve.js"></pre>
+      <pre style="user-select: all;"><<i></i>link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cheeriko/softserve/dist/softserve.min.css"></pre>
       <p>Bootstrap 4 JS
         <br><small>This is needed for collapses, modals, and carousels.</small>
       </p>
@@ -155,33 +148,37 @@
     <hr>
     <h4 class="text-muted">Icons</h4>
     <p>You don't <i>need</i> icons, but if you want to be a bit fancier, I got you covered.</p>
-    <pre style="user-select: all;"><<i></i>link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cheeriko/softserve/softserve.js"></pre>
-    <p>Bootstrap 4 JS
-      <br><small>This is needed for collapses, modals, and carousels.</small>
-    </p>
-    <pre style="user-select: all;"><<i></i>script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<<i></i>script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script></pre>
-  </div>
-
+    <ul class="fa-ul mb-5">
+      <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://icons.getbootstrap.com/">Bootstrap Icons</a></li>
+      <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://fontawesome.com/start">Font Awesome Icons</a></li>
+      <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://icons8.com/line-awesome">Line Awesome Icons</a></li>
+      <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://feathericons.com/">Feather Icons</a></li>
+    </ul>
+    
     <div class="section" id="typography">
       <h1 class="text-primary">Typography</h1>
       <blockquote>
+        I'm a quote. 
+      </blockquote>
+<pre><<i></i>blockquote>
+  Blockquote...
+<<i></i>/blockquote></pre>
+      <blockquote>
         <p>
-          All of this is wrapped in a blockquote!<br> 
-          <a href="">Example link.</a><br> 
-          <b>Bolded text.</b><br>  
-          <i>Italicized text.</i><br>  
-          <u>Underlined text.</u><br>  
-          <s>Strikethough text.</s><br>  
-          <small>Small text.</small>
+          <a href="">Example link</a><br> 
+          <b>Bolded text</b><br>  
+          <i>Italicized text</i><br>  
+          <u>Underlined text</u><br>  
+          <s>Strikethough text</s><br>  
+          <small>Small text</small>
         </p>
       </blockquote>
-<pre><<i></i>a href="">Example link.<<i></i>/a>
-<<i></i>b>Bolded text.<<i></i>/b> 
-<<i></i>i>Italicized text.<<i></i>/i> 
-<<i></i>u>Underlined text.<<i></i>/u>
-<<i></i>s>Strikethough text.<<i></i>/s> 
-<<i></i>small>Small text.<<i></i>/small></pre>
+<pre><<i></i>a href="">Example link<<i></i>/a>
+<<i></i>b>Bolded text<<i></i>/b> 
+<<i></i>i>Italicized text<<i></i>/i> 
+<<i></i>u>Underlined text<<i></i>/u>
+<<i></i>s>Strikethough text<<i></i>/s> 
+<<i></i>small>Small text<<i></i>/small></pre>
       <div>
         <h1>Heading 1</h1>
         <h2>Heading 2</h2>
@@ -448,7 +445,7 @@
       <h1 class="text-primary">Modal</h1>
       <p><b>You will need Jquery and Bootstrap's JS CDN to use this.</b></p>
 
-      <p><a class="btn" data-toggle="modal" data-target="#modalexample">Click for Demo Modal</a></p>
+      <p><a class="btn mb-2" data-toggle="modal" data-target="#modalexample">Click for Demo Modal</a></p>
       <div class="modal fade fade-scale" id="modalexample">
         <div class="modal-dialog">
           <div class="modal-card">
@@ -638,6 +635,7 @@
           </div>
         </div>
       </nav>
+      <p>With the collapse or dropdown.</p> 
 <pre><<i></i>nav class="navbar">
   <<i></i>div class="navbar-container">
     <<i></i>div class="logo">
@@ -680,6 +678,7 @@
     </div>
 
     <div class="section" id="quick-styles">
+
       <h1 class="text-primary">Quick Styles</h1>
       <p>For all the quick changes when you need them. Enjoy!!</p>
 
@@ -693,7 +692,7 @@
           </div>
         </div>
         <div class="col-md-4 col-6">
-          <div class="card card-content text-white">
+          <div class="card card-content bg-black text-white">
             .bg-black
           </div>
         </div>
@@ -850,7 +849,38 @@
     <div class="section" id="utility">
       <h1 class="text-primary">Utilities</h1>
       <p>More stuff you can use on the fly.</p> 
-      <p><span class="tooltip" data-tooltip="This is a pure CSS tooltip!">This is a tooltip.</span></p>
+
+      <div class="mt-5">
+        <h4>Image Thumbnail</h4>
+        <p><code>.img-thumbnail</code></p>
+        <img src="http://placeimg.com/200/200/nature" alt="Image thumbnail..." class="img-thumbnail">
+      </div>
+
+      <div class="clearfix mt-5">
+        <h4>Float</h4>
+        <p>Only float on screens larger than 767px.</p>
+        <div class="float-left mb-md-0 mb-3 text-center">
+          <img src="http://placeimg.com/200/200/animals" alt="Image thumbnail..." class="img-thumbnail mb-2">
+          <code>.float-left</code>
+        </div>
+        <div class="float-right text-center">
+          <img src="http://placeimg.com/200/200/people" alt="Image thumbnail..." class="img-thumbnail mb-2">
+          <code>.float-right</code>
+        </div>
+      </div>
+
+      <div class="mt-5">
+        <h4>Positions</h4>
+        <dl>
+          <dt><code>.fixed-top</code></dt>
+          <dd>Fixes element to the top of the page.</dd>
+          <dt><code>.fixed-bottom</code></dt>
+          <dd>Fixes element to the bottom of the page.</dd>
+          <dt><code>.sticky-top</code></dt>
+          <dd>Has the image stick to the top of the page on scroll.</dd>
+        </dl>
+      </div>
+
     </div>
 
     <div class="section" id="forms">
@@ -963,6 +993,7 @@
         <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://fonts.google.com/">Google Fonts</a> (Montserrat &amp; Comfortaa)</li>
         <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="http://placeimg.com/">Placeimg</a> (For placeholders)</li>
         <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://github.com/">Github</a> (Hosting!)</li>
+        <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://unsplash.com/photos/b9xUX3HR5nQ?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink">Christiann Koepke</a> (Header Image)</li>
       </ul>
     </div>
     
