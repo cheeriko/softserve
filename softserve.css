@@ -141,7 +141,7 @@
   --header-font-color: var(--font-color);
   --header-font-weight: var(--font-weight);
   --header-font-family: var(--font-family-display);
-  --header-margin-bottom: var(--spacer-3);
+  --header-margin-bottom: var(--spacer-4);
 
 
   /* Links
@@ -198,13 +198,13 @@
   --element-spacer: var(--spacer-4); 
 
   /* Grid spacing */
-  --grid-gutter: var(--spacer-4);
+  --grid-gutter: var(--spacer-3);
 
 
   /* Other Utility 
   ================================================================ */ 
 
-  --container-width: calc(700px + (var(--grid-gutter) * 2));
+  --container-width: calc(750px + (var(--grid-gutter) * 2));
   --modal-width: 600px;
 
   /* Transition time of links, buttons, etc. */
@@ -474,7 +474,7 @@ ul {list-style: disc outside}
 
 ul,
 ol {
-  margin: 0 0 var(--element-spacer) var(--spacer-4);
+  margin: var(--element-spacer) 0 var(--element-spacer) var(--spacer-4);
   padding-left: var(--spacer-3);
 }
 
@@ -488,6 +488,12 @@ dl dd {
   padding-left: var(--spacer-4);
 }
 
+.list-unstyled{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 
 /* <3 Table
 ================================================================== */
@@ -498,6 +504,10 @@ table {
   table-layout: fixed;
   width: 100%;
   margin-bottom: var(--element-spacer);
+}
+
+table thead tr{
+  border-bottom: calc(var(--border-width) * 2) var(--border-style) var(--border-color);
 }
 
 table tr {
@@ -617,7 +627,7 @@ select {
   height: 40px;
   width: 100%;
   cursor: pointer;
-  border: 0;
+  border: 1px solid var(--border-color);
   border-left: var(--border-radius-sm) solid var(--border-color);
   border-radius: var(--border-radius-sm) var(--border-radius) var(--border-radius) var(--border-radius-sm);
   background-color: var(--background-color-faded);
@@ -626,6 +636,7 @@ select {
   font-family: var(--body-font-family);
   letter-spacing: .02em;
   padding: var(--spacer-2) var(--spacer-3);
+  margin-bottom: var(--spacer-3);
   transition: border-color var(--transition-time) ease-in-out;
 }
 
@@ -656,7 +667,11 @@ select[multiple] {
   height: auto;
 }
 
-textarea {min-height: 100px;}
+textarea {
+  min-height: 100px;
+  padding: var(--spacer-3);    
+  width: 100% !important;
+}
 
 label,
 legend {
@@ -690,10 +705,11 @@ button,
   letter-spacing: .03em;
   font: inherit;
   font-weight: var(--font-weight-heavy);
-  font-size: var(--body-font-size);
+  font-size: var(--font-size-sm);
   text-transform: uppercase;
   white-space: nowrap;
   cursor: pointer;
+  user-select: none;
   padding: var(--spacer-2) var(--spacer-4) !important;
   transition: 
     color var(--transition-time) ease-in-out,
@@ -789,13 +805,13 @@ button:hover,
 
 /* Large and Small Buttons */
 .btn.btn-sm{
-  padding: var(--spacer-2) var(--spacer-3)!important;
+  padding: calc(var(--spacer-2) / 1.5) calc(var(--spacer-4) / 1.5) !important;
   font-size: var(--font-size-sm) !important;
   border-radius: var(--border-radius-sm) !important;
 }
 
 .btn.btn-lg{
-  padding: var(--spacer-3) var(--spacer-4) !important;
+  padding: calc(var(--spacer-2) * 1.5) calc(var(--spacer-4) * 1.5) !important;
   font-size: var(--font-size-lg) !important;
   border-radius: var(--border-radius-lg) !important;
 }
@@ -834,9 +850,13 @@ button:hover,
   margin: -1px;
   border-radius: 0 0 var(--border-radius-sm) var(--border-radius-sm);
   padding: var(--spacer-2) var(--spacer-4);
+  letter-spacing: 1px;
+  color: var(--font-color-faded);
+  text-transform: uppercase;
   font-size: var(--font-size-sm);
+  text-align: right;
   border-top: var(--border-width) var(--border-style) var(--border-color);
-  border-bottom: var(--border-radius-sm) solid var(--primary-accent);
+  border-bottom: var(--border-radius) solid var(--primary-accent);
 }
 
 
@@ -848,6 +868,8 @@ button:hover,
   justify-content: center;
   list-style: none;
   margin: 0;
+  padding: 0;
+  letter-spacing: 0;
 }
 
 .pagination li a{
@@ -858,15 +880,15 @@ button:hover,
   text-align: center;
   text-decoration: none;
   margin-right: -1px;
-  padding: var(--spacer-1) var(--spacer-3);
+  padding: var(--spacer-2) var(--spacer-3);
   transition: 
-  color var(--transition-time) ease, 
-  background-color var(--transition-time) ease,
-  border-color var(--transition-time) ease;
+    color var(--transition-time) ease, 
+    background-color var(--transition-time) ease,
+    border-color var(--transition-time) ease;
 }
 
-
 .pagination li:first-child *{border-radius: 10px 0 0 10px;}
+
 .pagination li:last-child *{
   margin-right: 0;
   border-radius: 0 10px 10px 0;
@@ -965,6 +987,10 @@ button:hover,
   border-radius: 0 0 var(--border-radius-sm) var(--border-radius-sm);
   padding: var(--spacer-3);
   font-size: var(--font-size-sm);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--font-color-faded);
+  text-align: right;
   border-top: 1px solid var(--border-color);
   border-bottom: var(--border-radius-sm) solid var(--primary-accent);
   text-align: right;
@@ -1030,7 +1056,7 @@ button:hover,
   font-weight: var(--font-weight);
   font-style: normal;
   line-height: 1.5;
-  text-align: left;
+  text-align: center;
   text-decoration: none;
   text-shadow: none;
   text-transform: none;
@@ -1451,6 +1477,12 @@ button:hover,
 .border-bottom-0 {border-bottom: 0 !important;}
 .border-left-0 {border-left: 0 !important;}
 
+/* Border Radius */
+.border-rounded-0{border-radius: 0;}
+.border-rounded{border-radius: var(--border-radius);}
+.border-rounded-sm{border-radius: var(--border-radius-sm);}
+.border-rounded-lg{border-radius: var(--border-radius-lg);}
+
 /* Alt Border Colors */
 .border-primary {border-color: var(--primary-accent) !important;}
 .border-secondary {border-color: var(--secondary-accent) !important;}
@@ -1548,7 +1580,6 @@ a.text-primary:hover, a.text-primary:focus{
   display: flex;  
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: calc(var(--grid-gutter) / 2);
   margin-left: calc(var(--grid-gutter) / -2);
   margin-right: calc(var(--grid-gutter) / -2);
 }
@@ -1565,7 +1596,7 @@ a.text-primary:hover, a.text-primary:focus{
 .col,
 [class*=" col-"],
 [class^="col-"] {
-  margin: 0 calc(var(--grid-gutter) / 2) calc(var(--grid-gutter) / 2);
+  margin: calc(var(--grid-gutter) / 2);
   position: relative;
   width: 100%;
 }
