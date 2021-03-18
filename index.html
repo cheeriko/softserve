@@ -102,9 +102,9 @@
       <p>I made this for me, mostly, and for other people who aren't super code savvy but need to throw together a site for whatever reason. A nice boilerplate to work on but also a good enough framework to just make a whole (lite) site with.</p>
       <p>No need for compilers, it's just straight CSS (although it might look jank in some browsers. Fuck IE8.)</p>
       <p>Uses CSS variables so you can quickly style and go.</p>
-      <p>Inspired by and utilized techniques from <a href="">Milligram.CSS</a>, <a href="">Chota.CSS</a>, and the <a href="">Bootstrap 4 Framework</a>.</p>
+      <p>Inspired by and utilized techniques from <a href="https://milligram.io/">Milligram.CSS</a>, <a href="https://jenil.github.io/chota/">Chota.CSS</a>, and the <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap 4 Framework</a>.</p>
       <hr>
-      <h4>Download</h4>
+      <h4 class="text-muted">Download</h4>
       <div class="row">
         <div class="col-6">
           <a class="btn btn-primary d-block" href="">Direct Download</a>
@@ -114,7 +114,7 @@
         </div>
       </div>
       <hr>
-      <h4>CDN</h4>
+      <h4 class="text-muted">CDN</h4>
       <p>Just the CSS</p>
       <pre style="user-select: all;"><<i></i>link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cheeriko/softserve/softserve.js"></pre>
       <p>Bootstrap 4 JS
@@ -123,7 +123,7 @@
       <pre style="user-select: all;"><<i></i>script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <<i></i>script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script></pre>
     <hr>
-    <h4>Icons</h4>
+    <h4 class="text-muted">Icons</h4>
     <p>You don't <i>need</i> icons, but if you want to be a bit fancier, I got you covered.</p>
     <pre style="user-select: all;"><<i></i>link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cheeriko/softserve/softserve.js"></pre>
     <p>Bootstrap 4 JS
@@ -293,7 +293,7 @@
 
     <div class="section" id="buttons">
       <h1 class="text-primary">Buttons</h1>
-      <div class="row">
+      <div class="row mb-2">
         <div class="col-md-3">
           <p><b>Normal Buttons</b></p>
           <a href="" class="btn d-block mb-3">Default</a>
@@ -330,12 +330,13 @@
 
     <div class="section" id="card">
       <h1 class="text-primary">Card</h1>
+      <p>You can use <code><<i></i>div class="card card-content">...<<i></i>/div></code> for a plain card!</p>
       <div class="card mb-4">
         <div class="card-header">
           Header
         </div>
         <div class="card-content">
-          Content
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, aliquid? Illo minima eligendi praesentium. Quaerat excepturi autem quos facere eos blanditiis ipsum. Maiores aperiam libero ipsum beatae corporis quae id?
         </div>
         <div class="card-footer">
           <a href="">Let's go!</a>
@@ -346,7 +347,7 @@
     Header
   <<i></i>/div>
   <<i></i>div class="card-content">
-    Content
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, aliquid? Illo minima eligendi praesentium. Quaerat excepturi autem quos facere eos blanditiis ipsum. Maiores aperiam libero ipsum beatae corporis quae id?
   <<i></i>/div>
   <<i></i>div class="card-footer">
     <<i></i>a href="">Let's go!<<i></i>/a>
@@ -368,7 +369,7 @@
           <a class="btn d-block" data-toggle="collapse" data-target=".collapse-item-class">Both Collapses</a>
         </div>
       </div>
-      <div class="row">
+      <div class="row mb-2">
         <div class="col">
           <div class="collapse collapse-item-class" id="collapse1">
             <div class="card card-content">
@@ -426,11 +427,11 @@
               <a class="close" data-dismiss="modal">&times;</a>
             </div>
             <div class="modal-body">
-              Wow, look at this modal.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptatem atque quos tempora accusantium iure doloribus numquam, provident veniam necessitatibus in. Ea sit id eos asperiores excepturi ipsam sapiente impedit.
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button class="btn">Save changes</button>
             </div>
           </div>
         </div>
@@ -444,11 +445,11 @@
         <<i></i>a class="close" data-dismiss="modal">&times;<<i></i>/a>
       <<i></i>/div>
       <<i></i>div class="modal-body">
-        Write your content here!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptatem atque quos tempora accusantium iure doloribus numquam, provident veniam necessitatibus in. Ea sit id eos asperiores excepturi ipsam sapiente impedit.
       <<i></i>/div>
       <<i></i>div class="modal-footer">
-        <<i></i>button type="button" class="btn btn-secondary" data-dismiss="modal">Close<<i></i>/button>
-        <<i></i>button type="button" class="btn btn-primary">Save changes<<i></i>/button>
+        <<i></i>button class="btn btn-secondary" data-dismiss="modal">Close<<i></i>/button>
+        <<i></i>button class="btn">Save changes<<i></i>/button>
       <<i></i>/div>
     <<i></i>/div>
   <<i></i>/div>
@@ -472,7 +473,7 @@
           <!-- First Slide -->
           <div class="carousel-item active">
 
-            <img class="d-block w-100" src="http://placeimg.com/900/500/nature" alt="First slide">
+            <img class="d-block w-100 rounded-0" src="http://placeimg.com/900/500/nature" alt="First slide">
 
             <!-- Optional caption -->
             <div class="carousel-caption d-none d-md-block">
@@ -485,7 +486,7 @@
           <!-- Second Slide -->
           <div class="carousel-item">
 
-            <img class="d-block w-100" src="http://placeimg.com/900/500/animals" alt="Second slide">
+            <img class="d-block w-100 rounded-0" src="http://placeimg.com/900/500/animals" alt="Second slide">
 
             <!-- Optional caption -->
             <div class="carousel-caption d-none d-md-block">
@@ -497,7 +498,7 @@
           <!-- Third Slide -->
           <div class="carousel-item">
 
-            <img class="d-block w-100" src="http://placeimg.com/900/500/people" alt="Third slide">
+            <img class="d-block w-100 rounded-0" src="http://placeimg.com/900/500/people" alt="Third slide">
 
             <!-- Optional caption -->
             <div class="carousel-caption d-none d-md-block">
@@ -531,7 +532,7 @@
     <<i></i>!-- First Slide -->
     <<i></i>div class="carousel-item active">
 
-      <<i></i>img class="d-block w-100" src="http://placeimg.com/900/500/nature" alt="First slide">
+      <<i></i>img class="d-block w-100 rounded-0" src="http://placeimg.com/900/500/nature" alt="First slide">
 
       <<i></i>!-- Optional caption -->
       <<i></i>div class="carousel-caption d-none d-md-block">
@@ -544,7 +545,7 @@
     <<i></i>!-- Second Slide -->
     <<i></i>div class="carousel-item">
 
-      <<i></i>img class="d-block w-100" src="http://placeimg.com/900/500/animals" alt="Second slide">
+      <<i></i>img class="d-block w-100 rounded-0" src="http://placeimg.com/900/500/animals" alt="Second slide">
 
       <<i></i>!-- Optional caption -->
       <<i></i>div class="carousel-caption d-none d-md-block">
@@ -556,7 +557,7 @@
     <<i></i>!-- Third Slide -->
     <<i></i>div class="carousel-item">
 
-      <<i></i>img class="d-block w-100" src="http://placeimg.com/900/500/people" alt="Third slide">
+      <<i></i>img class="d-block w-100 rounded-0" src="http://placeimg.com/900/500/people" alt="Third slide">
 
       <<i></i>!-- Optional caption -->
       <<i></i>div class="carousel-caption d-none d-md-block">
@@ -580,14 +581,15 @@
 
     <div class="section" id="navbar">
       <h1 class="text-primary">Navbar</h1>
-      <nav class="navbar">
+      <p>I made this as simple as possible. Navs are honestly the worst.</p>
+      <nav class="navbar mb-4">
         <div class="navbar-container">
           <div class="logo">
             <a href=""><i class="nav-icon">◯</i> Title</a>
             <a class="menu-toggle" data-toggle="collapse" href="#navcollapse"><i class="nav-icon">≡</i></a>
           </div>
           <div class="nav-link-menu collapse" id="navcollapse">
-            <a class="nav-link" href="">Support Me</a>
+            <a class="nav-link" href="">Nav Link</a>
             <div class="dropdown">
               <a class="nav-link">Dropdown <i class="nav-icon">▼</i></a>
               <div class="dropdown-menu">
@@ -606,125 +608,322 @@
           </div>
         </div>
       </nav>
+<pre><<i></i>nav class="navbar">
+  <<i></i>div class="navbar-container">
+    <<i></i>div class="logo">
+      <<i></i>a href=""><<i></i>i class="nav-icon">◯<<i></i>/i> Title<<i></i>/a>
+      <<i></i>a class="menu-toggle" data-toggle="collapse" href="#navcollapse"><<i></i>i class="nav-icon">≡<<i></i>/i><<i></i>/a>
+    <<i></i>/div>
+    <<i></i>div class="nav-link-menu collapse" id="navcollapse">
+      <<i></i>a class="nav-link" href="">Nav Link<<i></i>/a>
+      <<i></i>div class="dropdown">
+        <<i></i>a class="nav-link">Dropdown <<i></i>i class="nav-icon">▼<<i></i>/i><<i></i>/a>
+        <<i></i>div class="dropdown-menu">
+          <<i></i>a class="nav-link" href="">Dropdown Link<<i></i>/a>
+          <<i></i>a class="nav-link" href="">Dropdown Link<<i></i>/a>
+          <<i></i>div class="dropdown">
+            <<i></i>a class="nav-link">Subnav <<i></i>i class="nav-icon">▼<<i></i>/i><<i></i>/a>
+            <<i></i>div class="dropdown-menu">
+              <<i></i>a class="nav-link" href="">Dropdown Link<<i></i>/a>
+              <<i></i>a class="nav-link" href="">Dropdown Link<<i></i>/a>
+              <<i></i>a class="nav-link" href="">Dropdown Link<<i></i>/a>
+            <<i></i>/div>
+          <<i></i>/div>
+        <<i></i>/div>
+      <<i></i>/div>
+    <<i></i>/div>
+  <<i></i>/div>
+<<i></i>/nav></pre>
+<p>Without the collapse or dropdown.</p>  
+<pre><<i></i>nav class="navbar">
+  <<i></i>div class="navbar-container">
+    <<i></i>div class="logo">
+      <<i></i>a href=""><<i></i>i class="nav-icon">◯<<i></i>/i> Title<<i></i>/a>
+    <<i></i>/div>
+    <<i></i>div class="nav-link-menu">
+      <<i></i>a class="nav-link" href="">Nav Link<<i></i>/a>
+      <<i></i>a class="nav-link" href="">Nav Link<<i></i>/a>
+      <<i></i>a class="nav-link" href="">Nav Link<<i></i>/a>
+    <<i></i>/div>
+  <<i></i>/div>
+<<i></i>/nav></pre>
     </div>
 
     <div class="section" id="utility">
       <h1 class="text-primary">Quick Styles</h1>
-      <p>About</p>
-      <h2>Backgrounds</h2>
+      <p>For all the quick changes when you need them. Enjoy!!</p>
+      <hr>
+      <h2 class="text-secondary">Backgrounds</h2>
       <div class="row text-center mb-4">
-        <div class="col-4">
+        <div class="col-md-4 col-6">
           <div class="card card-content bg-white text-black">
             .bg-white
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-md-4 col-6">
           <div class="card card-content text-white">
             .bg-black
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-md-4 col-6">
           <div class="card card-content bg-faded">
             .bg-faded
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-md-4 col-6">
           <div class="card card-content bg-reset">
             .bg-reset
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-md-4 col-6">
           <div class="card card-content bg-primary text-white">
             .bg-primary
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-md-4 col-6">
           <div class="card card-content bg-secondary text-white">
             .bg-secondary
           </div>
         </div>
       </div>
       <hr>
-      <h2>Text</h2>
-      <h3>Text Color</h3>
-      <p>
+      <h2 class="text-secondary">Text</h2>
+      <h4 class="text-muted">Text Color</h4>
+      <blockquote>
         <a href="" class="text-white">.text-white</a><br>
         <a href="" class="text-black">.text-black</a><br>
         <a href="" class="text-body">.text-body</a><br>
         <a href="" class="text-muted">.text-muted</a><br>
         <a href="" class="text-primary">.text-primary</a><br>
         <a href="" class="text-secondary">.text-secondary</a>
-      </p>
-      <h3>Text Align</h3>
-      <p class="text-left">.text-left</p>
-      <p class="text-center">.text-center</p>
-      <p class="text-right">.text-right</p>
-      <h3>Text Transform</h3>
-      <p class="text-lowercase">.text-lowercase</p>
-      <p class="text-uppercase">.text-uppercase</p>
-      <p class="text-capitalize">.text-capitalize</p>
-      <h3>Font Sizes</h3>
-      <p class="font-size-reset">.font-size-reset</p>
-      <p class="font-size-lg">.font-size-lg</p>
-      <p class="font-size-sm">.font-size-sm</p>
+      </blockquote>
+      <h4 class="text-muted">Text Align</h4>
+      <blockquote>
+        <p class="text-left">.text-left</p>
+        <p class="text-center">.text-center</p>
+        <p class="text-right">.text-right</p>
+      </blockquote>
+      <h4 class="text-muted">Text Transform</h4>
+      <blockquote>
+        <p class="text-lowercase">.text-lowercase</p>
+        <p class="text-uppercase">.text-uppercase</p>
+        <p class="text-capitalize">.text-capitalize</p>
+      </blockquote>
+      <h4 class="text-muted">Font Sizes</h4>
+      <blockquote>
+        <p class="font-size-reset">.font-size-reset</p>
+        <p class="font-size-lg">.font-size-lg</p>
+        <p class="font-size-sm">.font-size-sm</p>
+      </blockquote>
       <hr>
-      <h2>Borders</h2>
-      <div class="row text-center mb-4">
-        <div class="col-4">
-          <div class="border p-3 bg-faded">
+      <h2 class="text-secondary">Borders</h2>
+      <h4>Adds Borders</h4>
+      <div class="row text-center mb-5">
+        <div class="col-12">
+          <div class="border p-3">
             .border
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-md col-6">
+          <div class="border-top p-3">
+            .border-top
+          </div>
+        </div>
+        <div class="col-md col-6">
+          <div class="border-right p-3">
+            .border-right
+          </div>
+        </div>
+        <div class="col-md col-6">
+          <div class="border-bottom p-3">
+            .border-bottom
+          </div>
+        </div>
+        <div class="col-md col-6">
+          <div class="border-left p-3">
+            .border-left
+          </div>
+        </div>
+      </div>
+      <h4>Removes Borders</h4>
+      <div class="row text-center mb-5">
+        <div class="col-12">
+          <div class="card border-0 p-3">
+            .border-0
+          </div>
+        </div>
+        <div class="col-md col-6">
+          <div class="card border-top-0 rounded-0 p-3">
+            .border-top-0
+          </div>
+        </div>
+        <div class="col-md col-6">
+          <div class="card border-right-0 rounded-0 p-3">
+            .border-right-0
+          </div>
+        </div>
+        <div class="col-md col-6">
+          <div class="card border-bottom-0 rounded-0 p-3">
+            .border-bottom-0
+          </div>
+        </div>
+        <div class="col-md col-6">
+          <div class="card border-left-0 rounded-0 p-3">
+            .border-left-0
+          </div>
+        </div>
+      </div>
+      <h4>Border Radius</h4>
+      <div class="row text-center mb-5">
+        <div class="col-md col-6">
+          <div class="border p-3">
+            .rounded-0
+          </div>
+        </div>
+        <div class="col-md col-6">
+          <div class="border p-3 rounded">
+            .rounded
+          </div>
+        </div>
+        <div class="col-md col-6">
+          <div class="border p-3 rounded-sm">
+            .rounded-sm
+          </div>
+        </div>
+        <div class="col-md col-6">
+          <div class="border p-3 rounded-lg">
+            .rounded-lg
+          </div>
+        </div>
+      </div>
+      <h4>Alt Colors</h4>
+      <div class="row text-center">
+        <div class="col-6">
           <div class="border p-3 border-primary">
             .border-primary
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-6">
           <div class="border p-3 border-secondary">
             .border-secondary
           </div>
         </div>
       </div>
-      <p></p> 
     </div>
 
     <div class="section" id="utility">
       <h1 class="text-primary">Utilities</h1>
-      <p>About</p> 
-    </div>
-
-    <div class="section" id="tooltip">
-      <h1 class="text-primary">Tooltip</h1>
+      <p>More stuff you can use on the fly.</p> 
       <p><span class="tooltip" data-tooltip="This is a pure CSS tooltip!">This is a tooltip.</span></p>
     </div>
 
     <div class="section" id="forms">
       <h1 class="text-primary">Forms</h1>
-      <form class="card card-content bg-faded">
-        <h3>Contact Me</h3>
-        <fieldset>
+      <form class="card bg-faded mb-4">
+        <div class="card-header">
+          Contact Me
+        </div>
+        <fieldset class="card-content">
           <label for="inputname">Name</label>
           <input id="inputname" type="text" placeholder="Name">
           <label for="inputemailaddress">Email Address</label>
           <input id="inputemailaddress" type="email" placeholder="name@email.com">
           <label for="inputmessage">Message</label>
           <textarea id="inputmessage" placeholder="Tell me what's on your mind..."></textarea>
-          <div class="text-right">
-            <input class="button-primary" type="submit" value="Send">
-          </div>
         </fieldset>
+        <div class="card-footer">
+          <input class="button-primary" type="submit" value="Send">
+        </div>
       </form>
+<pre><<i></i>form class="card card-content bg-faded">
+  <<i></i>h4 class="text-muted">Contact Me<<i></i>/h4>
+  <<i></i>fieldset>
+    <<i></i>label for="inputname">Name<<i></i>/label>
+    <<i></i>input id="inputname" type="text" placeholder="Name">
+    <<i></i>label for="inputemailaddress">Email Address<<i></i>/label>
+    <<i></i>input id="inputemailaddress" type="email" placeholder="name@email.com">
+    <<i></i>label for="inputmessage">Message<<i></i>/label>
+    <<i></i>textarea id="inputmessage" placeholder="Tell me what's on your mind..."><<i></i>/textarea>
+    <<i></i>div class="text-right">
+      <<i></i>input class="button-primary" type="submit" value="Send">
+    <<i></i>/div>
+  <<i></i>/fieldset>
+<<i></i>/form></pre>
     </div>
 
     <div class="section" id="grid">
       <h1 class="text-primary">Grid</h1>
-      <p>This is just Bootstrap 4's basic grid that's been trimmed to be a little less chonky.</p>
-      <p></p>
+      <p>This is just <a href="https://getbootstrap.com/docs/4.0/layout/grid/">Bootstrap 4's basic grid</a> that's been trimmed to be a little less chonky and edited to mimic Chota.CSS's approach to custom gutters.</p>
+      <p>Below is an example grid but I suggest you take a look at the docs linked above.</p>
+      <p>This also include orders, flex alignments, and custom padding and margins.</p>
+      <div class="row text-center mb-4">
+        <div class="col-lg-4">
+          <div class="bg-faded rounded p-3">
+            .col-lg-4
+          </div>
+        </div>
+        <div class="col-md-4 col-6">
+          <div class="bg-faded rounded p-3">
+            .col-md-4 .col-6
+          </div>
+        </div>
+        <div class="col-md-4 col-6">
+          <div class="bg-faded rounded p-3">
+            .col-4
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="bg-faded rounded p-3">
+            .col-12
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-faded rounded p-3">
+            .col-lg-6
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-faded rounded p-3">
+            .col-lg-6
+          </div>
+        </div>
+      </div>
+<pre><<i></i>div class="row text-center">
+
+  <<i></i>div class="col-lg-4">
+    ...
+  <<i></i>/div>
+
+  <<i></i>div class="col-md-4 col-6">
+    ...
+  <<i></i>/div>
+
+  <<i></i>div class="col-md-4 col-6">
+    ...
+  <<i></i>/div>
+
+  <<i></i>div class="col-12">
+    ...
+  <<i></i>/div>
+
+  <<i></i>div class="col-lg-6">
+    ...
+  <<i></i>/div>
+
+  <<i></i>div class="col-lg-6">
+    ...
+  <<i></i>/div>
+
+<<i></i>/div></pre>
     </div>
 
     <div class="section" id="end">
       <h1 class="text-primary">You made it!</h1>
+      
+    </div>
+
+    <div class="section" id="credit">
+      <h1 class="text-primary">Credits</h1>
       
     </div>
     

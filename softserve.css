@@ -1,16 +1,22 @@
 /* ================================================================ /
 
-  MIT License
-
-  Built by: Cheeriko
+  Built by: 
+    <3 Cheeriko      || https://github.com/cheeriko
+    >  MIT License   || https://github.com/cheeriko/softserve/blob/main/LICENSE
 
   Built with: 
-    - Vanilla CSS || https://vanillacss.com/
-    - Bootstrap 4 || https://getbootstrap.com/docs/4.0/getting-started/introduction/
+    <3 Vanilla CSS   || https://vanillacss.com/
+    >  MIT License   || https://github.com/bradleytaunt/vanilla-css/blob/master/LICENSE
+
+    <3 Bootstrap 4   || https://getbootstrap.com/docs/4.0/getting-started/introduction/
+    >  MIT License   || https://getbootstrap.com/docs/4.0/about/license/
 
   Inspired by: 
-    - Milligram CSS || https://milligram.io/
-    - Chota CSS || https://jenil.github.io/chota/
+    <3 Milligram CSS || https://milligram.io/
+    >  MIT License   || https://github.com/milligram/milligram/blob/master/license
+
+    <3 Chota CSS     || https://jenil.github.io/chota/
+    >  MIT License   || https://github.com/jenil/chota/blob/master/LICENSE
 
 / ================================================================= /
 
@@ -25,7 +31,7 @@
     6.  <3 Code 
     7.  <3 HR 
     8.  <3 Images
-    9.  <3 Lists 
+    9.  <3 Lists
     10. <3 Table
     11. <3 Utility
     12. <3 Scrollbar
@@ -172,6 +178,10 @@
   --navbar-font-color-hover: var(--primary-accent);
   --navbar-font-family: var(--font-family-display);
   --navbar-font-size: var(--body-font-size);
+  
+  /* Navbar Logo Styles */
+  --navbar-logo-font-color: var(--primary-accent);
+  --navbar-logo-font-color-hover: var(--font-color-faded);
   --navbar-logo-font-size: var(--h4-font-size);
 
   /* Navbar Border Styles */
@@ -483,6 +493,11 @@ li ol {
   margin-bottom: var(--spacer-1);
 }
 
+ul li,
+ol li {
+  margin-bottom: var(--spacer-2);
+}
+
 dl dd {
   padding-left: var(--spacer-4);
 }
@@ -584,23 +599,29 @@ th:last-child {
 @media (min-width: 762px){
 
   *::-webkit-scrollbar-thumb{
-    background-color: var(--primary-accent);
+    background-color: var(--border-color);
+    border: 4px solid var(--background-color-faded);
+    border-radius: 10px;
+  }
+
+  *::-webkit-scrollbar-corner{
+    background-color: var(--background-color-faded);
   }
 
   *::-webkit-scrollbar{
-    width: 6px;
-    height: 6px;
-    background-color: var(--border-color);
+    width: 14px;
+    height: 14px;
+    background-color: var(--background-color-faded);
   }
 
-  body::-webkit-scrollbar-track{
-    border-left: 1px solid var(--border-color);
+  body::-webkit-scrollbar-thumb{
+    background-color: var(--primary-accent);
+    border: 0;
+    border-radius: 0;
   }
 
   body::-webkit-scrollbar{
-    width: 12px;
-    height: 12px;
-    background-color: var(--background-color-faded);
+    background-color: var(--background-color);
   }
 
 }
@@ -849,10 +870,14 @@ button:hover,
   padding: var(--spacer-4);
 }
 
+.card-content *:last-child{
+  margin-bottom: 0;
+}
+
 .card-footer{
   margin: -1px;
   border-radius: 0 0 var(--border-radius-sm) var(--border-radius-sm);
-  padding: var(--spacer-3);
+  padding: var(--spacer-3) var(--spacer-4);
   letter-spacing: 1px;
   color: var(--font-color-faded);
   text-transform: uppercase;
@@ -975,6 +1000,7 @@ ul.pagination li a.active{
 .modal-header {
   border-radius: var(--border-radius) var(--border-radius) 0 0;
   padding: var(--spacer-3) var(--spacer-4);
+  color: var(--primary-accent-font);
   background-color: var(--primary-accent);
   font-size: var(--h3-font-size);
   display: flex;
@@ -995,7 +1021,7 @@ ul.pagination li a.active{
 .modal-footer {
   margin: -1px;
   border-radius: 0 0 var(--border-radius-sm) var(--border-radius-sm);
-  padding: var(--spacer-3);
+  padding: var(--spacer-3) var(--spacer-4);
   font-size: var(--font-size-sm);
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -1340,6 +1366,15 @@ ul.pagination li a.active{
   padding: var(--spacer-1) var(--spacer-3);
 }
 
+.navbar .logo a{
+  color: var(--navbar-logo-font-color);
+}
+
+.navbar .logo a:hover,
+.navbar .logo a:focus{
+  color: var(--navbar-logo-font-color-hover);
+}
+
 /* Navbar link container */
 .navbar .nav-link-menu {
   border-top: 1px solid var(--navbar-border-color);
@@ -1487,10 +1522,10 @@ ul.pagination li a.active{
 .border-left-0 {border-left: 0 !important;}
 
 /* Border Radius */
-.border-rounded-0{border-radius: 0;}
-.border-rounded{border-radius: var(--border-radius);}
-.border-rounded-sm{border-radius: var(--border-radius-sm);}
-.border-rounded-lg{border-radius: var(--border-radius-lg);}
+.rounded-0{border-radius: 0 !important;}
+.rounded{border-radius: var(--border-radius) !important;}
+.rounded-sm{border-radius: var(--border-radius-sm) !important;}
+.rounded-lg{border-radius: var(--border-radius-lg) !important;}
 
 /* Alt Border Colors */
 .border-primary {border-color: var(--primary-accent) !important;}
@@ -1550,9 +1585,9 @@ a.text-primary:hover, a.text-primary:focus{
 .text-capitalize {text-transform: capitalize !important;}
 
 /* Font Sizes */
-.font-size-reset {font-size: var(--font-size);}
-.font-size-lg {font-size: var(--font-size-lg);}
-.font-size-sm {font-size: var(--font-size-sm);}
+.font-size-reset {font-size: var(--font-size) !important;}
+.font-size-lg {font-size: var(--font-size-lg) !important;}
+.font-size-sm {font-size: var(--font-size-sm) !important;}
 
 
 /* <3 Backgrounds
