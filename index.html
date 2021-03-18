@@ -1,17 +1,19 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Title -->
   <title>Softserve CSS</title>
+  
+  <!-- Site Info  -->
+  <meta name="description" content="A watered down boostrap css framework.">
+  <meta name="keywords" content="CSS, Framework">
+  <meta name="author" content="Cheeriko">
 
   <!-- Softserve Stylesheet -->
-  <link rel="stylesheet" href="softserve.css" />
+  <link rel="stylesheet" href="dist/softserve.css" />
 
   <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -33,6 +35,8 @@
       max-height: 350px;
     }
 
+    .hero{display: none;}
+
     @media (min-width: 768px) {
       .section{
         padding: 7rem 0
@@ -43,6 +47,25 @@
         top: 0;
         z-index: 1050;
       }
+
+      .hero{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: calc(100vh - 60px);
+        background-color: var(--background-color-faded);
+        border-bottom: 1px solid var(--border-color);
+        background-image: url(https://images.unsplash.com/photo-1505976311692-e64b8bbd6cfa);
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #222;
+        text-align: center;
+        font-size: 150%;
+      }
     }
 
   </style>
@@ -50,17 +73,24 @@
 </head>
 
 <body>
-
+  <div class="hero">
+    <div>
+      <i class="fal fa-ice-cream fa-4x"></i>
+      <h1 class="mt-4">Softserve.css</h1>
+      <p>Take a chomp.</p>
+    </div>
+  </div>
   <nav class="navbar navbar-sticky">
     <div class="navbar-container">
       <div class="logo">
         <a href=""><i class="fal fa-ice-cream nav-icon"></i> Softserve</a>
-        <a class="menu-toggle bi bi-list nav-icon" data-toggle="collapse" href="#softservenav"></a>
+        <a class="menu-toggle fal fa-bars nav-icon" data-toggle="collapse" href="#softservenav"></a>
       </div>
       <div class="nav-link-menu collapse" id="softservenav">
         <a class="nav-link" href="#work">Support Me</a>
+        <a class="nav-link" href="#work">Github</a>
         <div class="dropdown">
-          <a class="nav-link">Docs <i class="bi bi-chevron-down nav-icon"></i></a>
+          <a class="nav-link">Docs <i class="fal fa-chevron-down nav-icon"></i></a>
           <div class="dropdown-menu">
             <a class="nav-link" href="#getting-started">Getting Started</a>
             <a class="nav-link" href="#typography">Typography</a>
@@ -70,7 +100,7 @@
             <a class="nav-link" href="#buttons">Buttons</a>
             <a class="nav-link" href="#card">Card</a>
             <div class="dropdown">
-              <a class="nav-link">Bootstrap JS <i class="bi bi-chevron-down nav-icon"></i></a>
+              <a class="nav-link">Bootstrap JS <i class="fal fa-chevron-down nav-icon"></i></a>
               <div class="dropdown-menu">
                 <a class="nav-link" href="#collapse">Collapse</a>
                 <a class="nav-link" href="#modal">Modal</a>
@@ -80,7 +110,7 @@
             <a class="nav-link" href="#tooltip">Tooltip</a>
             <a class="nav-link" href="#navbar">Navbar</a>
             <div class="dropdown">
-              <a class="nav-link">Quick Styles <i class="bi bi-chevron-down nav-icon"></i></a>
+              <a class="nav-link">Quick Styles <i class="fal fa-chevron-down nav-icon"></i></a>
               <div class="dropdown-menu">
                 <a class="nav-link" href="#backgrounds">Backgrounds</a>
                 <a class="nav-link" href="#texts">Texts</a>
@@ -473,7 +503,7 @@
           <!-- First Slide -->
           <div class="carousel-item active">
 
-            <img class="d-block w-100 rounded-0" src="http://placeimg.com/900/500/nature" alt="First slide">
+            <img class="d-block w-100" src="http://placeimg.com/900/500/nature" alt="First slide">
 
             <!-- Optional caption -->
             <div class="carousel-caption d-none d-md-block">
@@ -486,7 +516,7 @@
           <!-- Second Slide -->
           <div class="carousel-item">
 
-            <img class="d-block w-100 rounded-0" src="http://placeimg.com/900/500/animals" alt="Second slide">
+            <img class="d-block w-100" src="http://placeimg.com/900/500/animals" alt="Second slide">
 
             <!-- Optional caption -->
             <div class="carousel-caption d-none d-md-block">
@@ -498,7 +528,7 @@
           <!-- Third Slide -->
           <div class="carousel-item">
 
-            <img class="d-block w-100 rounded-0" src="http://placeimg.com/900/500/people" alt="Third slide">
+            <img class="d-block w-100" src="http://placeimg.com/900/500/people" alt="Third slide">
 
             <!-- Optional caption -->
             <div class="carousel-caption d-none d-md-block">
@@ -532,7 +562,7 @@
     <<i></i>!-- First Slide -->
     <<i></i>div class="carousel-item active">
 
-      <<i></i>img class="d-block w-100 rounded-0" src="http://placeimg.com/900/500/nature" alt="First slide">
+      <<i></i>img class="d-block w-100" src="http://placeimg.com/900/500/nature" alt="First slide">
 
       <<i></i>!-- Optional caption -->
       <<i></i>div class="carousel-caption d-none d-md-block">
@@ -545,7 +575,7 @@
     <<i></i>!-- Second Slide -->
     <<i></i>div class="carousel-item">
 
-      <<i></i>img class="d-block w-100 rounded-0" src="http://placeimg.com/900/500/animals" alt="Second slide">
+      <<i></i>img class="d-block w-100" src="http://placeimg.com/900/500/animals" alt="Second slide">
 
       <<i></i>!-- Optional caption -->
       <<i></i>div class="carousel-caption d-none d-md-block">
@@ -557,7 +587,7 @@
     <<i></i>!-- Third Slide -->
     <<i></i>div class="carousel-item">
 
-      <<i></i>img class="d-block w-100 rounded-0" src="http://placeimg.com/900/500/people" alt="Third slide">
+      <<i></i>img class="d-block w-100" src="http://placeimg.com/900/500/people" alt="Third slide">
 
       <<i></i>!-- Optional caption -->
       <<i></i>div class="carousel-caption d-none d-md-block">
@@ -649,10 +679,12 @@
 <<i></i>/nav></pre>
     </div>
 
-    <div class="section" id="utility">
+    <div class="section" id="quick-styles">
       <h1 class="text-primary">Quick Styles</h1>
       <p>For all the quick changes when you need them. Enjoy!!</p>
-      <hr>
+
+
+      <hr id="backgrounds">
       <h2 class="text-secondary">Backgrounds</h2>
       <div class="row text-center mb-4">
         <div class="col-md-4 col-6">
@@ -686,12 +718,14 @@
           </div>
         </div>
       </div>
-      <hr>
+
+
+      <hr id="texts">
       <h2 class="text-secondary">Text</h2>
       <h4 class="text-muted">Text Color</h4>
       <blockquote>
-        <a href="" class="text-white">.text-white</a><br>
-        <a href="" class="text-black">.text-black</a><br>
+        <a href="" class="text-white bg-black">.text-white</a><br>
+        <a href="" class="text-black bg-white">.text-black</a><br>
         <a href="" class="text-body">.text-body</a><br>
         <a href="" class="text-muted">.text-muted</a><br>
         <a href="" class="text-primary">.text-primary</a><br>
@@ -715,7 +749,9 @@
         <p class="font-size-lg">.font-size-lg</p>
         <p class="font-size-sm">.font-size-sm</p>
       </blockquote>
-      <hr>
+
+
+      <hr id="borders">
       <h2 class="text-secondary">Borders</h2>
       <h4>Adds Borders</h4>
       <div class="row text-center mb-5">
@@ -917,14 +953,17 @@
 <<i></i>/div></pre>
     </div>
 
-    <div class="section" id="end">
-      <h1 class="text-primary">You made it!</h1>
-      
-    </div>
-
     <div class="section" id="credit">
       <h1 class="text-primary">Credits</h1>
-      
+      <ul class="fa-ul mb-5">
+        <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://jenil.github.io/chota/">Chota CSS Framework</a></li>
+        <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://milligram.io/">Milligram CSS Framework</a></li>
+        <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://getbootstrap.com/docs/4.6/getting-started/introduction/">Boostrap 4</a></li>
+        <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://fontawesome.com/">Font Awesome 5 Icons</a></li>
+        <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://fonts.google.com/">Google Fonts</a> (Montserrat &amp; Comfortaa)</li>
+        <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="http://placeimg.com/">Placeimg</a> (For placeholders)</li>
+        <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://github.com/">Github</a> (Hosting!)</li>
+      </ul>
     </div>
     
   </div>
