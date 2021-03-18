@@ -130,12 +130,12 @@
   ================================================================ */
   
   /* Header Font Sizes */
-  --h1-font-size: 2.75rem;
-  --h2-font-size: 2.5rem;
-  --h3-font-size: 1.5rem;
-  --h4-font-size: 1.25rem;
-  --h5-font-size: 1.5rem;
-  --h6-font-size: 1.25rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.75rem;
+  --h4-font-size: 1.5rem;
+  --h5-font-size: 1.25rem;
+  --h6-font-size: 1rem;
   
   /* Header Font Styles */
   --header-font-color: var(--font-color);
@@ -265,7 +265,7 @@ html{
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;
-  font-size: 100%;
+  font-size : 100%;
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -278,8 +278,8 @@ body {
   font-family: var(--font-family-body);
   font-size: var(--body-font-size);
   font-weight: var(--body-font-weight);
-  letter-spacing: .02em;
-  line-height: 1.6;
+  letter-spacing: .03em;
+  line-height: 1.75;
 }
 
 
@@ -326,7 +326,7 @@ a:active {
 /* <3 Typography
 ================================================================== */
 
-p {margin-bottom: var(--element-spacer);}
+p {margin-bottom: calc(var(--element-spacer) * .75);}
 div p:last-child{margin: 0 !important}
 
 strong,time,b {font-weight: var(--font-weight-heavy);}
@@ -401,7 +401,6 @@ pre{
   border-radius: var(--border-radius-sm) var(--border-radius) var(--border-radius) var(--border-radius-sm);
   margin-bottom: var(--element-spacer);
   overflow: auto;
-  font-size: var(--font-size-sm);
 }
 
 code pre,
@@ -512,6 +511,10 @@ table thead tr{
 
 table tr {
   border-bottom: var(--border-width) var(--border-style) var(--border-color);
+}
+
+table tbody tr:last-child {
+  border-bottom: 0;
 }
 
 table th {
@@ -849,7 +852,7 @@ button:hover,
 .card-footer{
   margin: -1px;
   border-radius: 0 0 var(--border-radius-sm) var(--border-radius-sm);
-  padding: var(--spacer-2) var(--spacer-4);
+  padding: var(--spacer-3);
   letter-spacing: 1px;
   color: var(--font-color-faded);
   text-transform: uppercase;
@@ -863,16 +866,17 @@ button:hover,
 /* <3 Pagination
 ================================================================== */
 
-.pagination{
+ul.pagination{
   display: flex;
-  justify-content: center;
+  justify-content: start;
   list-style: none;
-  margin: 0;
+  margin: var(--element-spacer) 0;
   padding: 0;
   letter-spacing: 0;
+  overflow-x: auto;
 }
 
-.pagination li a{
+ul.pagination li a{
   display: inline-block;
   background-color: var(--body-background-color);
   border: var(--border-width) var(--border-style) var(--border-color);
@@ -887,19 +891,25 @@ button:hover,
     border-color var(--transition-time) ease;
 }
 
-.pagination li:first-child *{border-radius: 10px 0 0 10px;}
+ul.pagination li:first-child *{border-radius: 10px 0 0 10px;}
 
-.pagination li:last-child *{
+ul.pagination li:last-child *{
   margin-right: 0;
   border-radius: 0 10px 10px 0;
   border-right: var(--border-width) var(--border-style) var(--border-color);
 }
 
-.pagination li a:hover,
-.pagination li a.active{
+ul.pagination li a:hover,
+ul.pagination li a.active{
   color: var(--primary-accent-font);
   background-color: var(--primary-accent);
   border-color: var(--primary-accent);
+}
+
+@media (min-width:768px){
+  ul.pagination{
+    justify-content: center;
+  }
 }
 
 
@@ -1157,7 +1167,7 @@ button:hover,
   width: 100%;
   margin-right: -100%;
   backface-visibility: hidden;
-  transition: transform 1s ease-in-out;
+  transition: transform .5s ease-in-out;
 }
 
 .carousel-item.active,
@@ -1276,32 +1286,29 @@ button:hover,
   background-clip: padding-box;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
   opacity: .5;
-  transition: opacity 0.6s ease;
+  transition: opacity 0.5s ease;
 }
 
 .carousel-indicators .active {
   opacity: 1;
 }
 
-.carousel-indicators li {
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-}
-
 .carousel-indicators {
-  bottom: -50px;
+  bottom: calc(var(--spacer-2) * -1);
 }
 
 .carousel-caption {
   position: absolute;
   right: 15%;
-  bottom: 20px;
+  bottom: var(--spacer-4);
   left: 15%;
   z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: var(--spacer-4);
+  padding-bottom: var(--spacer-4);
   color: #fff;
   text-align: center;
 }
@@ -1354,6 +1361,8 @@ button:hover,
   color: var(--navbar-font-color-hover);
   background-color: var(--navbar-background-color-hover);
 }
+
+.nav-icon{font-style: normal;}
 
 /* Desktop style - mostly resetting mobile style */
 @media (min-width: 768px) {
@@ -1431,7 +1440,7 @@ button:hover,
     left: auto;
   }
 
-  .navbar .dropdown > .dropdown-menu .nav-link{
+  .navbar .dropdown > .dropdown-menu .nav-link {
     font-size: 90%;
     padding:  var(--spacer-2) var(--spacer-3);
     border-top: var(--navbar-border-width) var(--navbar-border-style) var(--navbar-border-color);
@@ -1439,12 +1448,12 @@ button:hover,
     text-align: center;
   }
 
-  .navbar .dropdown > .dropdown-menu > .nav-link:first-child{border: 0}
+  .navbar .dropdown > .dropdown-menu > .nav-link:first-child {border: 0}
 
   /* Secondary Nests */
-  .navbar .dropdown .dropdown i {
+  .navbar .dropdown .dropdown .nav-icon {
     position: absolute;
-    left: var(--spacer-3);
+    left: var(--spacer-2);
     top: 0;
     bottom: 0;
     display: flex;

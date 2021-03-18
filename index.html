@@ -28,45 +28,68 @@
   <script src="https://kit.fontawesome.com/a3d06f1529.js" crossorigin="anonymous"></script>
 
   <style>
-    .section{padding: 5rem 0}
+
+    pre{
+      max-height: 350px;
+    }
+
+    @media (min-width: 768px) {
+      .section{
+        padding: 7rem 0
+      }
+
+      .navbar-sticky{
+        position: sticky;
+        top: 0;
+        z-index: 1050;
+      }
+    }
+
   </style>
 
 </head>
 
 <body>
 
-  <nav class="navbar sticky-top">
+  <nav class="navbar navbar-sticky">
     <div class="navbar-container">
       <div class="logo">
-        <a href=""><i class="fal fa-ice-cream"></i> Softserve</a>
-        <a class="menu-toggle bi bi-list" data-toggle="collapse" href="#collapseExample"></a>
+        <a href=""><i class="fal fa-ice-cream nav-icon"></i> Softserve</a>
+        <a class="menu-toggle bi bi-list nav-icon" data-toggle="collapse" href="#softservenav"></a>
       </div>
-      <div class="nav-link-menu collapse" id="collapseExample">
+      <div class="nav-link-menu collapse" id="softservenav">
         <a class="nav-link" href="#work">Support Me</a>
         <div class="dropdown">
-          <a class="nav-link">Docs <i class="bi bi-chevron-down"></i></a>
+          <a class="nav-link">Docs <i class="bi bi-chevron-down nav-icon"></i></a>
           <div class="dropdown-menu">
-            <a class="nav-link" href="">Getting Started</a>
-            <a class="nav-link" href="">bonk</a>
-            <a class="nav-link" href="">bonk</a>
-            <a class="nav-link" href="">bonk</a>
-            <a class="nav-link" href="">bonk</a>
-            <a class="nav-link" href="">bonk</a>
-            <a class="nav-link" href="">bonk</a>
-            <a class="nav-link" href="">bonk</a>
+            <a class="nav-link" href="#getting-started">Getting Started</a>
+            <a class="nav-link" href="#typography">Typography</a>
+            <a class="nav-link" href="#lists">Lists</a>
+            <a class="nav-link" href="#table">Table</a>
+            <a class="nav-link" href="#pagination">Pagination</a>
+            <a class="nav-link" href="#buttons">Buttons</a>
+            <a class="nav-link" href="#card">Card</a>
             <div class="dropdown">
-              <a class="nav-link">Docs <i class="bi bi-chevron-down"></i></a>
+              <a class="nav-link">Bootstrap JS <i class="bi bi-chevron-down nav-icon"></i></a>
               <div class="dropdown-menu">
-                <a class="nav-link" href="">Getting Started</a>
-                <a class="nav-link" href="">bonk</a>
-                <a class="nav-link" href="">bonk</a>
-                <a class="nav-link" href="">bonk</a>
-                <a class="nav-link" href="">bonk</a>
-                <a class="nav-link" href="">bonk</a>
-                <a class="nav-link" href="">bonk</a>
-                <a class="nav-link" href="">bonk</a>
+                <a class="nav-link" href="#collapse">Collapse</a>
+                <a class="nav-link" href="#modal">Modal</a>
+                <a class="nav-link" href="#carousel">Carousel</a>
               </div>
             </div>
+            <a class="nav-link" href="#tooltip">Tooltip</a>
+            <a class="nav-link" href="#navbar">Navbar</a>
+            <div class="dropdown">
+              <a class="nav-link">Quick Styles <i class="bi bi-chevron-down nav-icon"></i></a>
+              <div class="dropdown-menu">
+                <a class="nav-link" href="#backgrounds">Backgrounds</a>
+                <a class="nav-link" href="#texts">Texts</a>
+                <a class="nav-link" href="#borders">Borders</a>
+              </div>
+            </div>
+            <a class="nav-link" href="#utility">Utility</a>
+            <a class="nav-link" href="#forms">Forms</a>
+            <a class="nav-link" href="#grid">Grid</a>
           </div>
         </div>
       </div>
@@ -76,11 +99,11 @@
 
     <div class="section" id="getting-started">
       <h1 class="text-primary">Getting Started</h1>
-      <div class="text-muted pl-4">
-        <p>I made this because I'm a little gremlin and I'm tired of fucking with SCSS!! I just wanna pop something in an editor and go!!</p>
-        <p>And no base css seems to have all the features I love to chow down on SO here is softserve.css.</p>
-      </div>
-      <hr class="my-4">
+      <p>I made this for me, mostly, and for other people who aren't super code savvy but need to throw together a site for whatever reason. A nice boilerplate to work on but also a good enough framework to just make a whole (lite) site with.</p>
+      <p>No need for compilers, it's just straight CSS (although it might look jank in some browsers. Fuck IE8.)</p>
+      <p>Uses CSS variables so you can quickly style and go.</p>
+      <p>Inspired by and utilized techniques from <a href="">Milligram.CSS</a>, <a href="">Chota.CSS</a>, and the <a href="">Bootstrap 4 Framework</a>.</p>
+      <hr>
       <h4>Download</h4>
       <div class="row">
         <div class="col-6">
@@ -90,7 +113,7 @@
           <a class="btn btn-primary d-block" href="">Github</a>
         </div>
       </div>
-      <hr class="my-4">
+      <hr>
       <h4>CDN</h4>
       <p>Just the CSS</p>
       <pre style="user-select: all;"><<i></i>link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cheeriko/softserve/softserve.js"></pre>
@@ -99,47 +122,95 @@
       </p>
       <pre style="user-select: all;"><<i></i>script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <<i></i>script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script></pre>
-    </div>
+    <hr>
+    <h4>Icons</h4>
+    <p>You don't <i>need</i> icons, but if you want to be a bit fancier, I got you covered.</p>
+    <pre style="user-select: all;"><<i></i>link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cheeriko/softserve/softserve.js"></pre>
+    <p>Bootstrap 4 JS
+      <br><small>This is needed for collapses, modals, and carousels.</small>
+    </p>
+    <pre style="user-select: all;"><<i></i>script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<<i></i>script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script></pre>
+  </div>
 
     <div class="section" id="typography">
       <h1 class="text-primary">Typography</h1>
-      <p>sss</p>
+      <blockquote>
+        <p>
+          All of this is wrapped in a blockquote!<br> 
+          <a href="">Example link.</a><br> 
+          <b>Bolded text.</b><br>  
+          <i>Italicized text.</i><br>  
+          <u>Underlined text.</u><br>  
+          <s>Strikethough text.</s><br>  
+          <small>Small text.</small>
+        </p>
+      </blockquote>
+<pre><<i></i>a href="">Example link.<<i></i>/a>
+<<i></i>b>Bolded text.<<i></i>/b> 
+<<i></i>i>Italicized text.<<i></i>/i> 
+<<i></i>u>Underlined text.<<i></i>/u>
+<<i></i>s>Strikethough text.<<i></i>/s> 
+<<i></i>small>Small text.<<i></i>/small></pre>
+      <div>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+      </div>
+<pre><<i></i>h1>Heading 1<<i></i>/h1>
+<<i></i>h2>Heading 2<<i></i>/h2>
+<<i></i>h3>Heading 3<<i></i>/h3>
+<<i></i>h4>Heading 4<<i></i>/h4>
+<<i></i>h5>Heading 5<<i></i>/h5>
+<<i></i>h6>Heading 6<<i></i>/h6></pre>
     </div>
 
     <div class="section" id="blockquote">
       <h1 class="text-primary">Lists</h1>
+      <p>You can also add <code>.list-unstyled</code> to reset the list styles.</p>
       <div class="row">
         <div class="col-4">
-          <p><b>Ordered List</b></p>
-          <ol>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+          <ol class="mt-0">
+            <li>Ordered list item</li>
+            <li>Ordered list item</li>
+            <li>Ordered list item</li>
           </ol>
         </div>
         <div class="col-4">
-          <p><b>Unordered List</b></p>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+          <ul class="mt-0">
+            <li>Unordered list item</li>
+            <li>Unordered list item</li>
+            <li>Unordered list item</li>
           </ul>
         </div>
         <div class="col-4">
-          <p><b>Unstyled List</b></p>
-          <ul class="list-unstyled">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+          <dl class="mt-0">
+            <dt>Description list title</dt>
+            <dd>Description list item</dd>
+            <dd>Description list item</dd>
+          </dl>
         </div>
       </div>
+<pre><<i></i>ol>
+  <<i></i>li>Ordered list item<<i></i>/li>
+  <<i></i>li>Ordered list item<<i></i>/li>
+  <<i></i>li>Ordered list item<<i></i>/li>
+<<i></i>/ol>
+  
+<<i></i>ul>
+  <<i></i>li>Unordered list item<<i></i>/li>
+  <<i></i>li>Unordered list item<<i></i>/li>
+  <<i></i>li>Unordered list item<<i></i>/li>
+<<i></i>/ul>
+
+<<i></i>dl>
+  <<i></i>dt>Description list title<<i></i>/dt>
+  <<i></i>dd>Description list item<<i></i>/dd>
+  <<i></i>dd>Description list item<<i></i>/dd>
+<<i></i>/dl></pre>
     </div>
 
     <div class="section" id="table">
@@ -150,7 +221,6 @@
             <th>Table Heading 1</th>
             <th>Table Heading 2</th>
             <th>Table Heading 3</th>
-            <th>Table Heading 3</th>
           </tr>
         </thead>
         <tbody>
@@ -158,28 +228,67 @@
             <td>Table Cell 1</td>
             <td>Table Cell 2</td>
             <td>Table Cell 3</td>
-            <td>Table Cell 3</td>
           </tr>
           <tr>
             <td>Table Cell 1</td>
             <td>Table Cell 2</td>
             <td>Table Cell 3</td>
-            <td>Table Cell 3</td>
           </tr>
           <tr>
             <td>Table Cell 1</td>
             <td>Table Cell 2</td>
-            <td>Table Cell 3</td>
-            <td>Table Cell 3</td>
-          </tr>
-          <tr>
-            <td>Table Cell 1</td>
-            <td>Table Cell 2</td>
-            <td>Table Cell 3</td>
             <td>Table Cell 3</td>
           </tr>
         </tbody>
       </table>
+<pre><<i></i>table>
+  <<i></i>thead>
+    <<i></i>tr>
+      <<i></i>th>Table Heading 1<<i></i>/th>
+      <<i></i>th>Table Heading 2<<i></i>/th>
+      <<i></i>th>Table Heading 3<<i></i>/th>
+    <<i></i>/tr>
+  <<i></i>/thead>
+  <<i></i>tbody>
+    <<i></i>tr>
+      <<i></i>td>Table Cell 1<<i></i>/td>
+      <<i></i>td>Table Cell 2<<i></i>/td>
+      <<i></i>td>Table Cell 3<<i></i>/td>
+    <<i></i>/tr>
+    <<i></i>tr>
+      <<i></i>td>Table Cell 1<<i></i>/td>
+      <<i></i>td>Table Cell 2<<i></i>/td>
+      <<i></i>td>Table Cell 3<<i></i>/td>
+    <<i></i>/tr>
+    <<i></i>tr>
+      <<i></i>td>Table Cell 1<<i></i>/td>
+      <<i></i>td>Table Cell 2<<i></i>/td>
+      <<i></i>td>Table Cell 3<<i></i>/td>
+    <<i></i>/tr>
+  <<i></i>/tbody>
+<<i></i>/table></pre>
+    </div>
+
+    <div class="section" id="pagination">
+      <h1 class="text-primary">Pagination</h1>
+      <ul class="pagination">
+        <li><a href="#">&laquo;</a></li>
+        <li><a href="#" class="active">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+      </ul>
+<pre><<i></i>ul class="pagination">
+  <<i></i>li><<i></i>a href="#">&laquo;<<i></i>/a><<i></i>/li>
+  <<i></i>li><<i></i>a href="#" class="active">1<<i></i>/a><<i></i>/li>
+  <<i></i>li><<i></i>a href="#">2<<i></i>/a><<i></i>/li>
+  <<i></i>li><<i></i>a href="#">3<<i></i>/a><<i></i>/li>
+  <<i></i>li><<i></i>a href="#">4<<i></i>/a><<i></i>/li>
+  <<i></i>li><<i></i>a href="#">5<<i></i>/a><<i></i>/li>
+  <<i></i>li><<i></i>a href="#">&raquo;<<i></i>/a><<i></i>/li>
+<<i></i>/ul></pre>
     </div>
 
     <div class="section" id="buttons">
@@ -206,11 +315,22 @@
           <a href="" class="btn btn-lg d-block">Large</a>
         </div>
       </div>
+<pre><<i></i>a href="" class="btn">Default<<i></i>/a>
+<<i></i>a href="" class="btn btn-secondary">Secondary<<i></i>/a>
+
+<<i></i>a href="" class="btn btn-outline">Default<<i></i>/a>
+<<i></i>a href="" class="btn btn-outline-secondary">Secondary<<i></i>/a>
+
+<<i></i>a href="" class="btn btn-link">Default<<i></i>/a>
+<<i></i>a href="" class="btn btn-link-secondary">Secondary<<i></i>/a>
+
+<<i></i>a href="" class="btn btn-sm">Small<<i></i>/a>
+<<i></i>a href="" class="btn btn-lg">Large<<i></i>/a></pre>
     </div>
 
     <div class="section" id="card">
       <h1 class="text-primary">Card</h1>
-      <div class="card">
+      <div class="card mb-4">
         <div class="card-header">
           Header
         </div>
@@ -221,61 +341,84 @@
           <a href="">Let's go!</a>
         </div>
       </div>
-    </div>
-
-    <div class="section" id="pagination">
-      <h1 class="text-primary">Pagination</h1>
-      <ul class="pagination">
-        <li><a href="#">&laquo;</a></li>
-        <li><a href="#" class="active">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#">6</a></li>
-        <li><a href="#">7</a></li>
-        <li><a href="#">8</a></li>
-        <li><a href="#">9</a></li>
-        <li><a href="#">&raquo;</a></li>
-      </ul>
+<pre><<i></i>div class="card">
+  <<i></i>div class="card-header">
+    Header
+  <<i></i>/div>
+  <<i></i>div class="card-content">
+    Content
+  <<i></i>/div>
+  <<i></i>div class="card-footer">
+    <<i></i>a href="">Let's go!<<i></i>/a>
+  <<i></i>/div>
+<<i></i>/div></pre>
     </div>
 
     <div class="section" id="collapse">
       <h1 class="text-primary">Collapse</h1>
+      <p><b>You will need Jquery and Bootstrap's JS CDN to use this.</b></p>
       <div class="row">
         <div class="col">
-          <a class="btn d-block" data-toggle="collapse" href="#multiCollapseExample1" >Toggle first element</a>
+          <a class="btn d-block" data-toggle="collapse" href="#collapse1">First Collapse</a>
         </div>
         <div class="col">
-          <a class="btn d-block" data-toggle="collapse" data-target="#multiCollapseExample2">Toggle second element</a>
+          <a class="btn d-block" data-toggle="collapse" data-target="#collapse2">Second Collapse</a>
         </div>
         <div class="col">
-          <a class="btn d-block" data-toggle="collapse" data-target=".multi-collapse">Toggle both elements</a>
+          <a class="btn d-block" data-toggle="collapse" data-target=".collapse-item-class">Both Collapses</a>
         </div>
       </div>
       <div class="row">
         <div class="col">
-          <div class="collapse multi-collapse" id="multiCollapseExample1">
+          <div class="collapse collapse-item-class" id="collapse1">
             <div class="card card-content">
               Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="collapse multi-collapse" id="multiCollapseExample2">
+          <div class="collapse collapse-item-class" id="collapse2">
             <div class="card card-content">
               Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
             </div>
           </div>
         </div>
       </div>
+<pre><<i></i>div class="row">
+  <<i></i>div class="col">
+    <<i></i>a class="btn d-block" data-toggle="collapse" href="#collapse1">First Collapse<<i></i>/a>
+  <<i></i>/div>
+  <<i></i>div class="col">
+    <<i></i>a class="btn d-block" data-toggle="collapse" data-target="#collapse2">Second Collapse<<i></i>/a>
+  <<i></i>/div>
+  <<i></i>div class="col">
+    <<i></i>a class="btn d-block" data-toggle="collapse" data-target=".collapse-item-class">Both Collapses<<i></i>/a>
+  <<i></i>/div>
+<<i></i>/div>
+<<i></i>div class="row">
+  <<i></i>div class="col">
+    <<i></i>div class="collapse collapse-item-class" id="collapse1">
+      <<i></i>div class="card card-content">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+      <<i></i>/div>
+    <<i></i>/div>
+  <<i></i>/div>
+  <<i></i>div class="col">
+    <<i></i>div class="collapse collapse-item-class" id="collapse2">
+      <<i></i>div class="card card-content">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+      <<i></i>/div>
+    <<i></i>/div>
+  <<i></i>/div>
+<<i></i>/div></pre>
     </div>
 
     <div class="section" id="modal">
       <h1 class="text-primary">Modal</h1>
+      <p><b>You will need Jquery and Bootstrap's JS CDN to use this.</b></p>
 
-      <a class="btn" data-toggle="modal" data-target="#exampleModalCenter">Click for Demo Modal</a>
-      <div class="modal fade fade-scale" id="exampleModalCenter" tabindex="-1">
+      <p><a class="btn" data-toggle="modal" data-target="#modalexample">Click for Demo Modal</a></p>
+      <div class="modal fade fade-scale" id="modalexample">
         <div class="modal-dialog">
           <div class="modal-card">
             <div class="modal-header">
@@ -283,7 +426,7 @@
               <a class="close" data-dismiss="modal">&times;</a>
             </div>
             <div class="modal-body">
-              ...
+              Wow, look at this modal.
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -292,53 +435,147 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="section" id="tooltip">
-      <h1 class="text-primary">Tooltip</h1>
-      <p><span class="tooltip" data-tooltip="This is a pure CSS tooltip!">This is a tooltip.</span></p>
+<pre><<i></i>a class="btn" data-toggle="modal" data-target="#modalexample">Click for Demo Modal<<i></i>/a>
+<<i></i>div class="modal fade fade-scale" id="modalexample">
+  <<i></i>div class="modal-dialog">
+    <<i></i>div class="modal-card">
+      <<i></i>div class="modal-header">
+        Modal title
+        <<i></i>a class="close" data-dismiss="modal">&times;<<i></i>/a>
+      <<i></i>/div>
+      <<i></i>div class="modal-body">
+        Write your content here!
+      <<i></i>/div>
+      <<i></i>div class="modal-footer">
+        <<i></i>button type="button" class="btn btn-secondary" data-dismiss="modal">Close<<i></i>/button>
+        <<i></i>button type="button" class="btn btn-primary">Save changes<<i></i>/button>
+      <<i></i>/div>
+    <<i></i>/div>
+  <<i></i>/div>
+<<i></i>/div></pre>
     </div>
 
     <div class="section" id="carousel">
       <h1 class="text-primary">Carousel</h1>
-      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <p><b>You will need Jquery and Bootstrap's JS CDN to use this.</b></p>
+      <div id="carouselexample" class="carousel slide mb-4" data-ride="carousel">
+
+        <!-- Optional controls -->
         <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselindicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselindicators" data-slide-to="1"></li>
+          <li data-target="#carouselindicators" data-slide-to="2"></li>
         </ol>
+
         <div class="carousel-inner">
+
+          <!-- First Slide -->
           <div class="carousel-item active">
-            <img class="d-block w-100" src="..." alt="First slide">
+
+            <img class="d-block w-100" src="http://placeimg.com/900/500/nature" alt="First slide">
+
+            <!-- Optional caption -->
             <div class="carousel-caption d-none d-md-block">
-              <h5>...</h5>
-              <p>...</p>
+              <h5 class="mb-1">Title</h5>
+              <p>Description of slide...</p>
+            </div>
+
+          </div>
+
+          <!-- Second Slide -->
+          <div class="carousel-item">
+
+            <img class="d-block w-100" src="http://placeimg.com/900/500/animals" alt="Second slide">
+
+            <!-- Optional caption -->
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="mb-1">Title</h5>
+              <p>Description of slide...</p>
             </div>
           </div>
+
+          <!-- Third Slide -->
           <div class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Second slide">
+
+            <img class="d-block w-100" src="http://placeimg.com/900/500/people" alt="Third slide">
+
+            <!-- Optional caption -->
             <div class="carousel-caption d-none d-md-block">
-              <h5>...</h5>
-              <p>...</p>
+              <h5 class="mb-1">Title</h5>
+              <p>Description of slide...</p>
             </div>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Third slide">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>...</h5>
-              <p>...</p>
-            </div>
+
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
+
+        <!-- Optional controls -->
+        <a class="carousel-control-prev" href="#carouselexample" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
+        <a class="carousel-control-next" href="#carouselexample" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
         </a>
+
       </div>
+<pre><<i></i>div id="carouselexample" class="carousel slide" data-ride="carousel">
+
+  <<i></i>!-- Optional controls -->
+  <<i></i>ol class="carousel-indicators">
+    <<i></i>li data-target="#carouselindicators" data-slide-to="0" class="active"><<i></i>/li>
+    <<i></i>li data-target="#carouselindicators" data-slide-to="1"><<i></i>/li>
+    <<i></i>li data-target="#carouselindicators" data-slide-to="2"><<i></i>/li>
+  <<i></i>/ol>
+
+  <<i></i>div class="carousel-inner">
+
+    <<i></i>!-- First Slide -->
+    <<i></i>div class="carousel-item active">
+
+      <<i></i>img class="d-block w-100" src="http://placeimg.com/900/500/nature" alt="First slide">
+
+      <<i></i>!-- Optional caption -->
+      <<i></i>div class="carousel-caption d-none d-md-block">
+        <<i></i>h5 class="mb-1">Title<<i></i>/h5>
+        <<i></i>p>Description of slide...<<i></i>/p>
+      <<i></i>/div>
+
+    <<i></i>/div>
+
+    <<i></i>!-- Second Slide -->
+    <<i></i>div class="carousel-item">
+
+      <<i></i>img class="d-block w-100" src="http://placeimg.com/900/500/animals" alt="Second slide">
+
+      <<i></i>!-- Optional caption -->
+      <<i></i>div class="carousel-caption d-none d-md-block">
+        <<i></i>h5 class="mb-1">Title<<i></i>/h5>
+        <<i></i>p>Description of slide...<<i></i>/p>
+      <<i></i>/div>
+    <<i></i>/div>
+
+    <<i></i>!-- Third Slide -->
+    <<i></i>div class="carousel-item">
+
+      <<i></i>img class="d-block w-100" src="http://placeimg.com/900/500/people" alt="Third slide">
+
+      <<i></i>!-- Optional caption -->
+      <<i></i>div class="carousel-caption d-none d-md-block">
+        <<i></i>h5 class="mb-1">Title<<i></i>/h5>
+        <<i></i>p>Description of slide...<<i></i>/p>
+      <<i></i>/div>
+
+    <<i></i>/div>
+  <<i></i>/div>
+
+  <<i></i>!-- Optional controls -->
+  <<i></i>a class="carousel-control-prev" href="#carouselexample" data-slide="prev">
+    <<i></i>span class="carousel-control-prev-icon"><<i></i>/span>
+  <<i></i>/a>
+  <<i></i>a class="carousel-control-next" href="#carouselexample" data-slide="next">
+    <<i></i>span class="carousel-control-next-icon"><<i></i>/span>
+  <<i></i>/a>
+
+<<i></i>/div></pre>
     </div>
 
     <div class="section" id="navbar">
@@ -346,23 +583,22 @@
       <nav class="navbar">
         <div class="navbar-container">
           <div class="logo">
-            <a href=""><i class="fal fa-heart"></i> Navbar</a>
-            <a class="menu-toggle bi bi-list" data-toggle="collapse" href="#collapseExample"></a>
+            <a href=""><i class="nav-icon">◯</i> Title</a>
+            <a class="menu-toggle" data-toggle="collapse" href="#navcollapse"><i class="nav-icon">≡</i></a>
           </div>
-          <div class="nav-link-menu collapse" id="collapseExample">
-            <a class="nav-link" href="#work">Support Me</a>
+          <div class="nav-link-menu collapse" id="navcollapse">
+            <a class="nav-link" href="">Support Me</a>
             <div class="dropdown">
-              <a class="nav-link">Docs <i class="bi bi-chevron-down"></i></a>
+              <a class="nav-link">Dropdown <i class="nav-icon">▼</i></a>
               <div class="dropdown-menu">
-                <a class="nav-link" href="">Getting Started</a>
-                <a class="nav-link" href="">bonk</a>
-                <a class="nav-link" href="">bonk</a>
+                <a class="nav-link" href="">Dropdown Link</a>
+                <a class="nav-link" href="">Dropdown Link</a>
                 <div class="dropdown">
-                  <a class="nav-link">Docs <i class="bi bi-chevron-down"></i></a>
+                  <a class="nav-link">Subnav <i class="nav-icon">▼</i></a>
                   <div class="dropdown-menu">
-                    <a class="nav-link" href="">Getting Started</a>
-                    <a class="nav-link" href="">bonk</a>
-                    <a class="nav-link" href="">bonk</a>
+                    <a class="nav-link" href="">Dropdown Link</a>
+                    <a class="nav-link" href="">Dropdown Link</a>
+                    <a class="nav-link" href="">Dropdown Link</a>
                   </div>
                 </div>
               </div>
@@ -373,7 +609,7 @@
     </div>
 
     <div class="section" id="utility">
-      <h1 class="text-primary">Utility</h1>
+      <h1 class="text-primary">Quick Styles</h1>
       <p>About</p>
       <h2>Backgrounds</h2>
       <div class="row text-center mb-4">
@@ -451,6 +687,16 @@
         </div>
       </div>
       <p></p> 
+    </div>
+
+    <div class="section" id="utility">
+      <h1 class="text-primary">Utilities</h1>
+      <p>About</p> 
+    </div>
+
+    <div class="section" id="tooltip">
+      <h1 class="text-primary">Tooltip</h1>
+      <p><span class="tooltip" data-tooltip="This is a pure CSS tooltip!">This is a tooltip.</span></p>
     </div>
 
     <div class="section" id="forms">
