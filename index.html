@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Title -->
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
   <title>Softserve CSS</title>
-  
+
   <!-- Site Info  -->
-  <meta name="description" content="A watered down boostrap css framework.">
+  <meta name="description" content="A simple CSS framework.">
   <meta name="keywords" content="CSS, Framework">
   <meta name="author" content="Cheeriko">
 
@@ -30,49 +31,64 @@
   <script src="https://kit.fontawesome.com/a3d06f1529.js" crossorigin="anonymous"></script>
 
   <style>
-
-    pre{
+    pre {
       max-height: 350px;
     }
 
-    .hero{display: none;}
+    .hero {
+      display: none;
+    }
+    
+    .section {
+      padding: 3.5rem 0
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: calc(100vh - 52px);
+      background-color: var(--background-color-faded);
+      border-bottom: 1px solid var(--border-color);
+      background-image: url(https://i.imgur.com/WjaNkid.jpg);
+      background-size: 300%;
+      background-position: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #222;
+      text-align: center;
+      font-size: 100%;
+    }
 
     @media (min-width: 768px) {
-      .section{
+
+      .section {
         padding: 7rem 0
       }
 
-      .navbar-sticky{
+      .navbar-sticky {
         position: sticky;
         top: 0;
         z-index: 1050;
       }
 
-      .hero{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+      .hero {
         height: calc(100vh - 60px);
-        background-color: var(--background-color-faded);
-        border-bottom: 1px solid var(--border-color);
-        background-image: url(https://i.imgur.com/WjaNkid.jpg);
+        font-size: 150%;
         background-attachment: fixed;
         background-size: cover;
-        background-position: center;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: #222;
-        text-align: center;
-        font-size: 150%;
       }
+
     }
 
   </style>
-
 </head>
-
 <body>
+
+        
+  <!-- Hero
+  ---------------------------------------------------------------- -->
   <div class="hero">
     <div>
       <i class="fal fa-ice-cream fa-4x"></i>
@@ -80,6 +96,10 @@
       <p>Take a chomp.</p>
     </div>
   </div>
+
+        
+  <!-- Navbar
+  ---------------------------------------------------------------- -->
   <nav class="navbar navbar-sticky">
     <div class="navbar-container">
       <div class="logo">
@@ -87,8 +107,8 @@
         <a class="menu-toggle fal fa-bars nav-icon" data-toggle="collapse" href="#softservenav"></a>
       </div>
       <div class="nav-link-menu collapse" id="softservenav">
-        <a class="nav-link" href="#work">Support Me</a>
-        <a class="nav-link" href="#work">Github</a>
+        <a class="nav-link" href="https://ko-fi.com/cheeriko">Support Me</a>
+        <a class="nav-link" href="https://github.com/cheeriko/softserve">Github</a>
         <div class="dropdown">
           <a class="nav-link">Docs <i class="fal fa-chevron-down nav-icon"></i></a>
           <div class="dropdown-menu">
@@ -118,14 +138,22 @@
       </div>
     </div>
   </nav>
+
+        
+  <!-- Main Container
+  ---------------------------------------------------------------- -->
   <div class="container">
 
+        
+    <!-- Intro
+    ---------------------------------------------------------------- -->
     <div class="section" id="getting-started">
       <h1 class="text-primary">Getting Started</h1>
-      <p>I made this for me, mostly, and for other people who aren't super code savvy but need to throw together a site for whatever reason. A nice boilerplate to work on but also a good enough framework to just make a whole (lite) site with.</p>
-      <p>No need for compilers, it's just straight CSS (although it might look a little weird in some browsers.)</p>
+      <p>I made this for me, mostly, and for other people who aren't super code savvy but need to throw together a site for whatever reason.</p>
       <p>Uses CSS variables so you can quickly style and go.</p>
-      <p>Inspired by and utilized techniques from <a href="https://milligram.io/">Milligram.CSS</a>, <a href="https://jenil.github.io/chota/">Chota.CSS</a>, and the <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap 4 Framework</a>.</p>
+      <p>Inspired by and utilized techniques from <a href="https://milligram.io/">Milligram.CSS</a>, <a
+          href="https://jenil.github.io/chota/">Chota.CSS</a>, and the <a
+          href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap 4 Framework</a>.</p>
       <hr>
       <h4 class="text-muted">Download</h4>
       <div class="row">
@@ -139,89 +167,101 @@
       <hr>
       <h4 class="text-muted">CDN</h4>
       <p>Just the CSS</p>
-      <pre style="user-select: all;"><<i></i>link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cheeriko/softserve/dist/softserve.min.css"></pre>
+      <pre
+        style="user-select: all;"><<i></i>link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cheeriko/softserve/dist/softserve.min.css"></pre>
       <p>Bootstrap 4 JS
         <br><small>This is needed for collapses, modals, and carousels.</small>
       </p>
-      <pre style="user-select: all;"><<i></i>script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <pre
+        style="user-select: all;"><<i></i>script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <<i></i>script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script></pre>
-    <hr>
-    <h4 class="text-muted">Icons</h4>
-    <p>You don't <i>need</i> icons, but if you want to be a bit fancier, I got you covered.</p>
-    <ul class="fa-ul mb-5">
-      <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://icons.getbootstrap.com/">Bootstrap Icons</a></li>
-      <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://fontawesome.com/start">Font Awesome Icons</a></li>
-      <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://icons8.com/line-awesome">Line Awesome Icons</a></li>
-      <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://feathericons.com/">Feather Icons</a></li>
-    </ul>
-    
-    <div class="section" id="typography">
-      <h1 class="text-primary">Typography</h1>
-      <blockquote>
-        I'm a quote. 
-      </blockquote>
-<pre><<i></i>blockquote>
+      <hr>
+      <h4 class="text-muted">Icons</h4>
+      <p>You don't <i>need</i> icons, but if you want to be a bit fancier, I got you covered.</p>
+      <ul class="fa-ul mb-5">
+        <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a
+            href="https://icons.getbootstrap.com/">Bootstrap Icons</a></li>
+        <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a
+            href="https://fontawesome.com/start">Font Awesome Icons</a></li>
+        <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a
+            href="https://icons8.com/line-awesome">Line Awesome Icons</a></li>
+        <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a
+            href="https://feathericons.com/">Feather Icons</a></li>
+      </ul>
+
+        
+      <!-- Typography
+      ---------------------------------------------------------------- -->
+      <div class="section" id="typography">
+        <h1 class="text-primary">Typography</h1>
+        <blockquote>
+          I'm a quote.
+        </blockquote>
+        <pre><<i></i>blockquote>
   Blockquote...
 <<i></i>/blockquote></pre>
-      <blockquote>
-        <p>
-          <a href="">Example link</a><br> 
-          <b>Bolded text</b><br>  
-          <i>Italicized text</i><br>  
-          <u>Underlined text</u><br>  
-          <s>Strikethough text</s><br>  
-          <small>Small text</small>
-        </p>
-      </blockquote>
-<pre><<i></i>a href="">Example link<<i></i>/a>
+        <blockquote>
+          <p>
+            <a href="">Example link</a><br>
+            <b>Bolded text</b><br>
+            <i>Italicized text</i><br>
+            <u>Underlined text</u><br>
+            <s>Strikethough text</s><br>
+            <small>Small text</small>
+          </p>
+        </blockquote>
+        <pre><<i></i>a href="">Example link<<i></i>/a>
 <<i></i>b>Bolded text<<i></i>/b> 
 <<i></i>i>Italicized text<<i></i>/i> 
 <<i></i>u>Underlined text<<i></i>/u>
 <<i></i>s>Strikethough text<<i></i>/s> 
 <<i></i>small>Small text<<i></i>/small></pre>
-      <div>
-        <h1>Heading 1</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h4>Heading 4</h4>
-        <h5>Heading 5</h5>
-        <h6>Heading 6</h6>
-      </div>
-<pre><<i></i>h1>Heading 1<<i></i>/h1>
+        <div>
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
+        </div>
+        <pre><<i></i>h1>Heading 1<<i></i>/h1>
 <<i></i>h2>Heading 2<<i></i>/h2>
 <<i></i>h3>Heading 3<<i></i>/h3>
 <<i></i>h4>Heading 4<<i></i>/h4>
 <<i></i>h5>Heading 5<<i></i>/h5>
 <<i></i>h6>Heading 6<<i></i>/h6></pre>
-    </div>
-
-    <div class="section" id="blockquote">
-      <h1 class="text-primary">Lists</h1>
-      <p>You can also add <code>.list-unstyled</code> to reset the list styles.</p>
-      <div class="row">
-        <div class="col-4">
-          <ol class="mt-0">
-            <li>Ordered list item</li>
-            <li>Ordered list item</li>
-            <li>Ordered list item</li>
-          </ol>
-        </div>
-        <div class="col-4">
-          <ul class="mt-0">
-            <li>Unordered list item</li>
-            <li>Unordered list item</li>
-            <li>Unordered list item</li>
-          </ul>
-        </div>
-        <div class="col-4">
-          <dl class="mt-0">
-            <dt>Description list title</dt>
-            <dd>Description list item</dd>
-            <dd>Description list item</dd>
-          </dl>
-        </div>
       </div>
-<pre><<i></i>ol>
+
+        
+      <!-- Lists
+      ---------------------------------------------------------------- -->
+      <div class="section" id="lists">
+        <h1 class="text-primary">Lists</h1>
+        <p>You can also add <code>.list-unstyled</code> to reset the list styles.</p>
+        <div class="row">
+          <div class="col-4">
+            <ol class="mt-0">
+              <li>Ordered list item</li>
+              <li>Ordered list item</li>
+              <li>Ordered list item</li>
+            </ol>
+          </div>
+          <div class="col-4">
+            <ul class="mt-0">
+              <li>Unordered list item</li>
+              <li>Unordered list item</li>
+              <li>Unordered list item</li>
+            </ul>
+          </div>
+          <div class="col-4">
+            <dl class="mt-0">
+              <dt>Description list title</dt>
+              <dd>Description list item</dd>
+              <dd>Description list item</dd>
+            </dl>
+          </div>
+        </div>
+        <pre><<i></i>ol>
   <<i></i>li>Ordered list item<<i></i>/li>
   <<i></i>li>Ordered list item<<i></i>/li>
   <<i></i>li>Ordered list item<<i></i>/li>
@@ -238,37 +278,40 @@
   <<i></i>dd>Description list item<<i></i>/dd>
   <<i></i>dd>Description list item<<i></i>/dd>
 <<i></i>/dl></pre>
-    </div>
+      </div>
 
-    <div class="section" id="table">
-      <h1 class="text-primary">Table</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Table Heading 1</th>
-            <th>Table Heading 2</th>
-            <th>Table Heading 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Table Cell 1</td>
-            <td>Table Cell 2</td>
-            <td>Table Cell 3</td>
-          </tr>
-          <tr>
-            <td>Table Cell 1</td>
-            <td>Table Cell 2</td>
-            <td>Table Cell 3</td>
-          </tr>
-          <tr>
-            <td>Table Cell 1</td>
-            <td>Table Cell 2</td>
-            <td>Table Cell 3</td>
-          </tr>
-        </tbody>
-      </table>
-<pre><<i></i>table>
+        
+      <!-- Table
+      ---------------------------------------------------------------- -->
+      <div class="section" id="table">
+        <h1 class="text-primary">Table</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Table Heading 1</th>
+              <th>Table Heading 2</th>
+              <th>Table Heading 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Table Cell 1</td>
+              <td>Table Cell 2</td>
+              <td>Table Cell 3</td>
+            </tr>
+            <tr>
+              <td>Table Cell 1</td>
+              <td>Table Cell 2</td>
+              <td>Table Cell 3</td>
+            </tr>
+            <tr>
+              <td>Table Cell 1</td>
+              <td>Table Cell 2</td>
+              <td>Table Cell 3</td>
+            </tr>
+          </tbody>
+        </table>
+        <pre><<i></i>table>
   <<i></i>thead>
     <<i></i>tr>
       <<i></i>th>Table Heading 1<<i></i>/th>
@@ -294,20 +337,23 @@
     <<i></i>/tr>
   <<i></i>/tbody>
 <<i></i>/table></pre>
-    </div>
+      </div>
 
-    <div class="section" id="pagination">
-      <h1 class="text-primary">Pagination</h1>
-      <ul class="pagination">
-        <li><a href="#">&laquo;</a></li>
-        <li><a href="#" class="active">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#">&raquo;</a></li>
-      </ul>
-<pre><<i></i>ul class="pagination">
+        
+      <!-- Pagination
+      ---------------------------------------------------------------- -->
+      <div class="section" id="pagination">
+        <h1 class="text-primary">Pagination</h1>
+        <ul class="pagination">
+          <li><a href="#">&laquo;</a></li>
+          <li><a href="#" class="active">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">&raquo;</a></li>
+        </ul>
+        <pre><<i></i>ul class="pagination">
   <<i></i>li><<i></i>a href="#">&laquo;<<i></i>/a><<i></i>/li>
   <<i></i>li><<i></i>a href="#" class="active">1<<i></i>/a><<i></i>/li>
   <<i></i>li><<i></i>a href="#">2<<i></i>/a><<i></i>/li>
@@ -316,33 +362,36 @@
   <<i></i>li><<i></i>a href="#">5<<i></i>/a><<i></i>/li>
   <<i></i>li><<i></i>a href="#">&raquo;<<i></i>/a><<i></i>/li>
 <<i></i>/ul></pre>
-    </div>
-
-    <div class="section" id="buttons">
-      <h1 class="text-primary">Buttons</h1>
-      <div class="row mb-2">
-        <div class="col-md-3">
-          <p><b>Normal Buttons</b></p>
-          <a href="" class="btn d-block mb-3">Default</a>
-          <a href="" class="btn btn-secondary d-block">Secondary</a>
-        </div>
-        <div class="col-md-3">
-          <p><b>Outlined Buttons</b></p>
-          <a href="" class="btn btn-outline d-block mb-3">Default</a>
-          <a href="" class="btn btn-outline-secondary d-block">Secondary</a>
-        </div>
-        <div class="col-md-3">
-          <p><b>Button Links</b></p>
-          <a href="" class="btn btn-link d-block mb-3">Default</a>
-          <a href="" class="btn btn-link-secondary d-block">Secondary</a>
-        </div>
-        <div class="col-md-3">
-          <p><b>Button Sizes</b></p>
-          <a href="" class="btn btn-sm d-block mb-3">Small</a>
-          <a href="" class="btn btn-lg d-block">Large</a>
-        </div>
       </div>
-<pre><<i></i>a href="" class="btn">Default<<i></i>/a>
+
+        
+      <!-- Buttons
+      ---------------------------------------------------------------- -->
+      <div class="section" id="buttons">
+        <h1 class="text-primary">Buttons</h1>
+        <div class="row mb-2">
+          <div class="col-md-3">
+            <p><b>Normal Buttons</b></p>
+            <a href="" class="btn d-block mb-3">Default</a>
+            <a href="" class="btn btn-secondary d-block">Secondary</a>
+          </div>
+          <div class="col-md-3">
+            <p><b>Outlined Buttons</b></p>
+            <a href="" class="btn btn-outline d-block mb-3">Default</a>
+            <a href="" class="btn btn-outline-secondary d-block">Secondary</a>
+          </div>
+          <div class="col-md-3">
+            <p><b>Button Links</b></p>
+            <a href="" class="btn btn-link d-block mb-3">Default</a>
+            <a href="" class="btn btn-link-secondary d-block">Secondary</a>
+          </div>
+          <div class="col-md-3">
+            <p><b>Button Sizes</b></p>
+            <a href="" class="btn btn-sm d-block mb-3">Small</a>
+            <a href="" class="btn btn-lg d-block">Large</a>
+          </div>
+        </div>
+        <pre><<i></i>a href="" class="btn">Default<<i></i>/a>
 <<i></i>a href="" class="btn btn-secondary">Secondary<<i></i>/a>
 
 <<i></i>a href="" class="btn btn-outline">Default<<i></i>/a>
@@ -353,23 +402,28 @@
 
 <<i></i>a href="" class="btn btn-sm">Small<<i></i>/a>
 <<i></i>a href="" class="btn btn-lg">Large<<i></i>/a></pre>
-    </div>
-
-    <div class="section" id="card">
-      <h1 class="text-primary">Card</h1>
-      <p>You can use <code><<i></i>div class="card card-content">...<<i></i>/div></code> for a plain card!</p>
-      <div class="card mb-4">
-        <div class="card-header">
-          Header
-        </div>
-        <div class="card-content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, aliquid? Illo minima eligendi praesentium. Quaerat excepturi autem quos facere eos blanditiis ipsum. Maiores aperiam libero ipsum beatae corporis quae id?
-        </div>
-        <div class="card-footer">
-          <a href="">Let's go!</a>
-        </div>
       </div>
-<pre><<i></i>div class="card">
+
+        
+      <!-- Card
+      ---------------------------------------------------------------- -->
+      <div class="section" id="card">
+        <h1 class="text-primary">Card</h1>
+        <p>You can use <code><<i></i>div class="card card-content">...<<i></i>/div></code> for a plain card!</p>
+        <div class="card mb-4">
+          <div class="card-header">
+            Header
+          </div>
+          <div class="card-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, aliquid? Illo minima eligendi praesentium.
+            Quaerat excepturi autem quos facere eos blanditiis ipsum. Maiores aperiam libero ipsum beatae corporis quae
+            id?
+          </div>
+          <div class="card-footer">
+            <a href="">Let's go!</a>
+          </div>
+        </div>
+        <pre><<i></i>div class="card">
   <<i></i>div class="card-header">
     Header
   <<i></i>/div>
@@ -380,39 +434,44 @@
     <<i></i>a href="">Let's go!<<i></i>/a>
   <<i></i>/div>
 <<i></i>/div></pre>
-    </div>
+      </div>
 
-    <div class="section" id="collapse">
-      <h1 class="text-primary">Collapse</h1>
-      <p><b>You will need Jquery and Bootstrap's JS CDN to use this.</b></p>
-      <div class="row">
-        <div class="col">
-          <a class="btn d-block" data-toggle="collapse" href="#collapse1">First Collapse</a>
+        
+      <!-- Collapse
+      ---------------------------------------------------------------- -->
+      <div class="section" id="collapse">
+        <h1 class="text-primary">Collapse</h1>
+        <p><b>You will need Jquery and Bootstrap's JS CDN to use this.</b></p>
+        <div class="row">
+          <div class="col">
+            <a class="btn d-block" data-toggle="collapse" href="#collapse1">First Collapse</a>
+          </div>
+          <div class="col">
+            <a class="btn d-block" data-toggle="collapse" data-target="#collapse2">Second Collapse</a>
+          </div>
+          <div class="col">
+            <a class="btn d-block" data-toggle="collapse" data-target=".collapse-item-class">Both Collapses</a>
+          </div>
         </div>
-        <div class="col">
-          <a class="btn d-block" data-toggle="collapse" data-target="#collapse2">Second Collapse</a>
-        </div>
-        <div class="col">
-          <a class="btn d-block" data-toggle="collapse" data-target=".collapse-item-class">Both Collapses</a>
-        </div>
-      </div>
-      <div class="row mb-2">
-        <div class="col">
-          <div class="collapse collapse-item-class" id="collapse1">
-            <div class="card card-content">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        <div class="row mb-1">
+          <div class="col">
+            <div class="collapse collapse-item-class" id="collapse1">
+              <div class="card card-content">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
+                anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="collapse collapse-item-class" id="collapse2">
+              <div class="card card-content">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
+                anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+              </div>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="collapse collapse-item-class" id="collapse2">
-            <div class="card card-content">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-            </div>
-          </div>
-        </div>
-      </div>
-<pre><<i></i>div class="row">
+        <pre><<i></i>div class="row">
   <<i></i>div class="col">
     <<i></i>a class="btn d-block" data-toggle="collapse" href="#collapse1">First Collapse<<i></i>/a>
   <<i></i>/div>
@@ -439,31 +498,36 @@
     <<i></i>/div>
   <<i></i>/div>
 <<i></i>/div></pre>
-    </div>
+      </div>
 
-    <div class="section" id="modal">
-      <h1 class="text-primary">Modal</h1>
-      <p><b>You will need Jquery and Bootstrap's JS CDN to use this.</b></p>
+        
+      <!-- Modal
+      ---------------------------------------------------------------- -->
+      <div class="section" id="modal">
+        <h1 class="text-primary">Modal</h1>
+        <p><b>You will need Jquery and Bootstrap's JS CDN to use this.</b></p>
 
-      <p><a class="btn mb-2" data-toggle="modal" data-target="#modalexample">Click for Demo Modal</a></p>
-      <div class="modal fade fade-scale" id="modalexample">
-        <div class="modal-dialog">
-          <div class="modal-card">
-            <div class="modal-header">
-              Modal title
-              <a class="close" data-dismiss="modal">&times;</a>
-            </div>
-            <div class="modal-body">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptatem atque quos tempora accusantium iure doloribus numquam, provident veniam necessitatibus in. Ea sit id eos asperiores excepturi ipsam sapiente impedit.
-            </div>
-            <div class="modal-footer">
-              <button class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button class="btn">Save changes</button>
+        <p><a class="btn mb-2" data-toggle="modal" data-target="#modalexample">Click for Demo Modal</a></p>
+        <div class="modal fade fade-scale" id="modalexample">
+          <div class="modal-dialog">
+            <div class="modal-card">
+              <div class="modal-header">
+                Modal title
+                <a class="close" data-dismiss="modal">&times;</a>
+              </div>
+              <div class="modal-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptatem atque quos tempora accusantium
+                iure doloribus numquam, provident veniam necessitatibus in. Ea sit id eos asperiores excepturi ipsam
+                sapiente impedit.
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button class="btn">Save changes</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-<pre><<i></i>a class="btn" data-toggle="modal" data-target="#modalexample">Click for Demo Modal<<i></i>/a>
+        <pre><<i></i>a class="btn" data-toggle="modal" data-target="#modalexample">Click for Demo Modal<<i></i>/a>
 <<i></i>div class="modal fade fade-scale" id="modalexample">
   <<i></i>div class="modal-dialog">
     <<i></i>div class="modal-card">
@@ -481,71 +545,74 @@
     <<i></i>/div>
   <<i></i>/div>
 <<i></i>/div></pre>
-    </div>
-
-    <div class="section" id="carousel">
-      <h1 class="text-primary">Carousel</h1>
-      <p><b>You will need Jquery and Bootstrap's JS CDN to use this.</b></p>
-      <div id="carouselexample" class="carousel slide mb-4" data-ride="carousel">
-
-        <!-- Optional controls -->
-        <ol class="carousel-indicators">
-          <li data-target="#carouselindicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselindicators" data-slide-to="1"></li>
-          <li data-target="#carouselindicators" data-slide-to="2"></li>
-        </ol>
-
-        <div class="carousel-inner">
-
-          <!-- First Slide -->
-          <div class="carousel-item active">
-
-            <img class="d-block w-100" src="http://placeimg.com/900/500/nature" alt="First slide">
-
-            <!-- Optional caption -->
-            <div class="carousel-caption d-none d-md-block">
-              <h5 class="mb-1">Title</h5>
-              <p>Description of slide...</p>
-            </div>
-
-          </div>
-
-          <!-- Second Slide -->
-          <div class="carousel-item">
-
-            <img class="d-block w-100" src="http://placeimg.com/900/500/animals" alt="Second slide">
-
-            <!-- Optional caption -->
-            <div class="carousel-caption d-none d-md-block">
-              <h5 class="mb-1">Title</h5>
-              <p>Description of slide...</p>
-            </div>
-          </div>
-
-          <!-- Third Slide -->
-          <div class="carousel-item">
-
-            <img class="d-block w-100" src="http://placeimg.com/900/500/people" alt="Third slide">
-
-            <!-- Optional caption -->
-            <div class="carousel-caption d-none d-md-block">
-              <h5 class="mb-1">Title</h5>
-              <p>Description of slide...</p>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Optional controls -->
-        <a class="carousel-control-prev" href="#carouselexample" data-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#carouselexample" data-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </a>
-
       </div>
-<pre><<i></i>div id="carouselexample" class="carousel slide" data-ride="carousel">
+
+        
+      <!-- Carousel
+      ---------------------------------------------------------------- -->
+      <div class="section" id="carousel">
+        <h1 class="text-primary">Carousel</h1>
+        <p><b>You will need Jquery and Bootstrap's JS CDN to use this.</b></p>
+        <div id="carouselexample" class="carousel slide mb-4" data-ride="carousel">
+
+          <!-- Optional controls -->
+          <ol class="carousel-indicators">
+            <li data-target="#carouselindicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselindicators" data-slide-to="1"></li>
+            <li data-target="#carouselindicators" data-slide-to="2"></li>
+          </ol>
+
+          <div class="carousel-inner">
+
+            <!-- First Slide -->
+            <div class="carousel-item active">
+
+              <img class="d-block w-100" src="http://placeimg.com/900/500/nature" alt="First slide">
+
+              <!-- Optional caption -->
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="mb-1">Title</h5>
+                <p>Description of slide...</p>
+              </div>
+
+            </div>
+
+            <!-- Second Slide -->
+            <div class="carousel-item">
+
+              <img class="d-block w-100" src="http://placeimg.com/900/500/animals" alt="Second slide">
+
+              <!-- Optional caption -->
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="mb-1">Title</h5>
+                <p>Description of slide...</p>
+              </div>
+            </div>
+
+            <!-- Third Slide -->
+            <div class="carousel-item">
+
+              <img class="d-block w-100" src="http://placeimg.com/900/500/people" alt="Third slide">
+
+              <!-- Optional caption -->
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="mb-1">Title</h5>
+                <p>Description of slide...</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Optional controls -->
+          <a class="carousel-control-prev" href="#carouselexample" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#carouselexample" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+
+        </div>
+        <pre><<i></i>div id="carouselexample" class="carousel slide" data-ride="carousel">
 
   <<i></i>!-- Optional controls -->
   <<i></i>ol class="carousel-indicators">
@@ -604,39 +671,42 @@
   <<i></i>/a>
 
 <<i></i>/div></pre>
-    </div>
+      </div>
 
-    <div class="section" id="navbar">
-      <h1 class="text-primary">Navbar</h1>
-      <p>I made this as simple as possible. Navs are honestly the worst.</p>
-      <nav class="navbar mb-4">
-        <div class="navbar-container">
-          <div class="logo">
-            <a href=""><i class="nav-icon">◯</i> Title</a>
-            <a class="menu-toggle" data-toggle="collapse" href="#navcollapse"><i class="nav-icon">≡</i></a>
-          </div>
-          <div class="nav-link-menu collapse" id="navcollapse">
-            <a class="nav-link" href="">Nav Link</a>
-            <div class="dropdown">
-              <a class="nav-link">Dropdown <i class="nav-icon">▼</i></a>
-              <div class="dropdown-menu">
-                <a class="nav-link" href="">Dropdown Link</a>
-                <a class="nav-link" href="">Dropdown Link</a>
-                <div class="dropdown">
-                  <a class="nav-link">Subnav <i class="nav-icon">▼</i></a>
-                  <div class="dropdown-menu">
-                    <a class="nav-link" href="">Dropdown Link</a>
-                    <a class="nav-link" href="">Dropdown Link</a>
-                    <a class="nav-link" href="">Dropdown Link</a>
+        
+      <!-- Navbar
+      ---------------------------------------------------------------- -->
+      <div class="section" id="navbar">
+        <h1 class="text-primary">Navbar</h1>
+        <p>I made this as simple as possible. Navs are honestly the worst.</p>
+        <nav class="navbar mb-4">
+          <div class="navbar-container">
+            <div class="logo">
+              <a href=""><i class="nav-icon">◯</i> Title</a>
+              <a class="menu-toggle" data-toggle="collapse" href="#navcollapse"><i class="nav-icon">≡</i></a>
+            </div>
+            <div class="nav-link-menu collapse" id="navcollapse">
+              <a class="nav-link" href="">Nav Link</a>
+              <div class="dropdown">
+                <a class="nav-link">Dropdown <i class="nav-icon">▼</i></a>
+                <div class="dropdown-menu">
+                  <a class="nav-link" href="">Dropdown Link</a>
+                  <a class="nav-link" href="">Dropdown Link</a>
+                  <div class="dropdown">
+                    <a class="nav-link">Subnav <i class="nav-icon">▼</i></a>
+                    <div class="dropdown-menu">
+                      <a class="nav-link" href="">Dropdown Link</a>
+                      <a class="nav-link" href="">Dropdown Link</a>
+                      <a class="nav-link" href="">Dropdown Link</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </nav>
-      <p>With the collapse or dropdown.</p> 
-<pre><<i></i>nav class="navbar">
+        </nav>
+        <p>With the collapse or dropdown.</p>
+        <pre><<i></i>nav class="navbar">
   <<i></i>div class="navbar-container">
     <<i></i>div class="logo">
       <<i></i>a href=""><<i></i>i class="nav-icon">◯<<i></i>/i> Title<<i></i>/a>
@@ -662,8 +732,8 @@
     <<i></i>/div>
   <<i></i>/div>
 <<i></i>/nav></pre>
-<p>Without the collapse or dropdown.</p>  
-<pre><<i></i>nav class="navbar">
+        <p>Without the collapse or dropdown.</p>
+        <pre><<i></i>nav class="navbar">
   <<i></i>div class="navbar-container">
     <<i></i>div class="logo">
       <<i></i>a href=""><<i></i>i class="nav-icon">◯<<i></i>/i> Title<<i></i>/a>
@@ -675,233 +745,245 @@
     <<i></i>/div>
   <<i></i>/div>
 <<i></i>/nav></pre>
-    </div>
-
-    <div class="section" id="quick-styles">
-
-      <h1 class="text-primary">Quick Styles</h1>
-      <p>For all the quick changes when you need them. Enjoy!!</p>
+      </div>
 
 
-      <hr id="backgrounds">
-      <h2 class="text-secondary">Backgrounds</h2>
-      <div class="row text-center mb-4">
-        <div class="col-md-4 col-6">
-          <div class="card card-content bg-white text-black">
-            .bg-white
+      <!-- Quick Styles
+      ---------------------------------------------------------------- -->
+      <div class="section" id="quick-styles">
+
+        <h1 class="text-primary">Quick Styles</h1>
+        <p>For all the quick changes when you need them. Enjoy!!</p>
+
+        <hr id="backgrounds">
+        <h2 class="text-secondary">Backgrounds</h2>
+        <div class="row text-center mb-4">
+          <div class="col-md-4 col-6">
+            <div class="card card-content bg-white text-black">
+              .bg-white
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="card card-content bg-black text-white">
+              .bg-black
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="card card-content bg-faded">
+              .bg-faded
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="card card-content bg-reset">
+              .bg-reset
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="card card-content bg-primary text-white">
+              .bg-primary
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="card card-content bg-secondary text-white">
+              .bg-secondary
+            </div>
           </div>
         </div>
-        <div class="col-md-4 col-6">
-          <div class="card card-content bg-black text-white">
-            .bg-black
+
+        
+        <!-- Texts
+        ---------------------------------------------------------------- -->
+        <hr id="texts">
+        <h2 class="text-secondary">Text</h2>
+        <h4 class="text-muted">Text Color</h4>
+        <blockquote>
+          <a href="" class="text-white bg-black">.text-white</a><br>
+          <a href="" class="text-black bg-white">.text-black</a><br>
+          <a href="" class="text-body">.text-body</a><br>
+          <a href="" class="text-muted">.text-muted</a><br>
+          <a href="" class="text-primary">.text-primary</a><br>
+          <a href="" class="text-secondary">.text-secondary</a>
+        </blockquote>
+        <h4 class="text-muted">Text Align</h4>
+        <blockquote>
+          <p class="text-left">.text-left</p>
+          <p class="text-center">.text-center</p>
+          <p class="text-right">.text-right</p>
+        </blockquote>
+        <h4 class="text-muted">Text Transform</h4>
+        <blockquote>
+          <p class="text-lowercase">.text-lowercase</p>
+          <p class="text-uppercase">.text-uppercase</p>
+          <p class="text-capitalize">.text-capitalize</p>
+        </blockquote>
+        <h4 class="text-muted">Font Sizes</h4>
+        <blockquote>
+          <p class="font-size-reset">.font-size-reset</p>
+          <p class="font-size-lg">.font-size-lg</p>
+          <p class="font-size-sm">.font-size-sm</p>
+        </blockquote>
+
+        
+        <!-- Borders
+        ---------------------------------------------------------------- -->
+        <hr id="borders">
+        <h2 class="text-secondary">Borders</h2>
+        <h4>Adds Borders</h4>
+        <div class="row text-center mb-5">
+          <div class="col-12">
+            <div class="border p-3">
+              .border
+            </div>
+          </div>
+          <div class="col-md col-6">
+            <div class="border-top p-3">
+              .border-top
+            </div>
+          </div>
+          <div class="col-md col-6">
+            <div class="border-right p-3">
+              .border-right
+            </div>
+          </div>
+          <div class="col-md col-6">
+            <div class="border-bottom p-3">
+              .border-bottom
+            </div>
+          </div>
+          <div class="col-md col-6">
+            <div class="border-left p-3">
+              .border-left
+            </div>
           </div>
         </div>
-        <div class="col-md-4 col-6">
-          <div class="card card-content bg-faded">
-            .bg-faded
+        <h4>Removes Borders</h4>
+        <div class="row text-center mb-5">
+          <div class="col-12">
+            <div class="card border-0 p-3">
+              .border-0
+            </div>
+          </div>
+          <div class="col-md col-6">
+            <div class="card border-top-0 rounded-0 p-3">
+              .border-top-0
+            </div>
+          </div>
+          <div class="col-md col-6">
+            <div class="card border-right-0 rounded-0 p-3">
+              .border-right-0
+            </div>
+          </div>
+          <div class="col-md col-6">
+            <div class="card border-bottom-0 rounded-0 p-3">
+              .border-bottom-0
+            </div>
+          </div>
+          <div class="col-md col-6">
+            <div class="card border-left-0 rounded-0 p-3">
+              .border-left-0
+            </div>
           </div>
         </div>
-        <div class="col-md-4 col-6">
-          <div class="card card-content bg-reset">
-            .bg-reset
+        <h4>Border Radius</h4>
+        <div class="row text-center mb-5">
+          <div class="col-md col-6">
+            <div class="border p-3">
+              .rounded-0
+            </div>
+          </div>
+          <div class="col-md col-6">
+            <div class="border p-3 rounded">
+              .rounded
+            </div>
+          </div>
+          <div class="col-md col-6">
+            <div class="border p-3 rounded-sm">
+              .rounded-sm
+            </div>
+          </div>
+          <div class="col-md col-6">
+            <div class="border p-3 rounded-lg">
+              .rounded-lg
+            </div>
           </div>
         </div>
-        <div class="col-md-4 col-6">
-          <div class="card card-content bg-primary text-white">
-            .bg-primary
+        <h4>Alt Colors</h4>
+        <div class="row text-center">
+          <div class="col-6">
+            <div class="border p-3 border-primary">
+              .border-primary
+            </div>
           </div>
-        </div>
-        <div class="col-md-4 col-6">
-          <div class="card card-content bg-secondary text-white">
-            .bg-secondary
+          <div class="col-6">
+            <div class="border p-3 border-secondary">
+              .border-secondary
+            </div>
           </div>
         </div>
       </div>
 
+        
+      <!-- Utility
+      ---------------------------------------------------------------- -->
+      <div class="section" id="utility">
+        <h1 class="text-primary">Utilities</h1>
+        <p>More stuff you can use on the fly.</p>
 
-      <hr id="texts">
-      <h2 class="text-secondary">Text</h2>
-      <h4 class="text-muted">Text Color</h4>
-      <blockquote>
-        <a href="" class="text-white bg-black">.text-white</a><br>
-        <a href="" class="text-black bg-white">.text-black</a><br>
-        <a href="" class="text-body">.text-body</a><br>
-        <a href="" class="text-muted">.text-muted</a><br>
-        <a href="" class="text-primary">.text-primary</a><br>
-        <a href="" class="text-secondary">.text-secondary</a>
-      </blockquote>
-      <h4 class="text-muted">Text Align</h4>
-      <blockquote>
-        <p class="text-left">.text-left</p>
-        <p class="text-center">.text-center</p>
-        <p class="text-right">.text-right</p>
-      </blockquote>
-      <h4 class="text-muted">Text Transform</h4>
-      <blockquote>
-        <p class="text-lowercase">.text-lowercase</p>
-        <p class="text-uppercase">.text-uppercase</p>
-        <p class="text-capitalize">.text-capitalize</p>
-      </blockquote>
-      <h4 class="text-muted">Font Sizes</h4>
-      <blockquote>
-        <p class="font-size-reset">.font-size-reset</p>
-        <p class="font-size-lg">.font-size-lg</p>
-        <p class="font-size-sm">.font-size-sm</p>
-      </blockquote>
+        <div class="mt-5">
+          <h4>Image Thumbnail</h4>
+          <p><code>.img-thumbnail</code></p>
+          <img src="http://placeimg.com/200/200/nature" alt="Image thumbnail..." class="img-thumbnail">
+        </div>
 
+        <div class="clearfix mt-5">
+          <h4>Float</h4>
+          <p>Only float on screens larger than 767px.</p>
+          <div class="float-left mb-md-0 mb-3 text-center">
+            <img src="http://placeimg.com/200/200/animals" alt="Image thumbnail..." class="img-thumbnail mb-2">
+            <code>.float-left</code>
+          </div>
+          <div class="float-right text-center">
+            <img src="http://placeimg.com/200/200/people" alt="Image thumbnail..." class="img-thumbnail mb-2">
+            <code>.float-right</code>
+          </div>
+        </div>
 
-      <hr id="borders">
-      <h2 class="text-secondary">Borders</h2>
-      <h4>Adds Borders</h4>
-      <div class="row text-center mb-5">
-        <div class="col-12">
-          <div class="border p-3">
-            .border
-          </div>
+        <div class="mt-5">
+          <h4>Positions</h4>
+          <dl>
+            <dt><code>.fixed-top</code></dt>
+            <dd>Fixes element to the top of the page.</dd>
+            <dt><code>.fixed-bottom</code></dt>
+            <dd>Fixes element to the bottom of the page.</dd>
+            <dt><code>.sticky-top</code></dt>
+            <dd>Has the image stick to the top of the page on scroll.</dd>
+          </dl>
         </div>
-        <div class="col-md col-6">
-          <div class="border-top p-3">
-            .border-top
-          </div>
-        </div>
-        <div class="col-md col-6">
-          <div class="border-right p-3">
-            .border-right
-          </div>
-        </div>
-        <div class="col-md col-6">
-          <div class="border-bottom p-3">
-            .border-bottom
-          </div>
-        </div>
-        <div class="col-md col-6">
-          <div class="border-left p-3">
-            .border-left
-          </div>
-        </div>
-      </div>
-      <h4>Removes Borders</h4>
-      <div class="row text-center mb-5">
-        <div class="col-12">
-          <div class="card border-0 p-3">
-            .border-0
-          </div>
-        </div>
-        <div class="col-md col-6">
-          <div class="card border-top-0 rounded-0 p-3">
-            .border-top-0
-          </div>
-        </div>
-        <div class="col-md col-6">
-          <div class="card border-right-0 rounded-0 p-3">
-            .border-right-0
-          </div>
-        </div>
-        <div class="col-md col-6">
-          <div class="card border-bottom-0 rounded-0 p-3">
-            .border-bottom-0
-          </div>
-        </div>
-        <div class="col-md col-6">
-          <div class="card border-left-0 rounded-0 p-3">
-            .border-left-0
-          </div>
-        </div>
-      </div>
-      <h4>Border Radius</h4>
-      <div class="row text-center mb-5">
-        <div class="col-md col-6">
-          <div class="border p-3">
-            .rounded-0
-          </div>
-        </div>
-        <div class="col-md col-6">
-          <div class="border p-3 rounded">
-            .rounded
-          </div>
-        </div>
-        <div class="col-md col-6">
-          <div class="border p-3 rounded-sm">
-            .rounded-sm
-          </div>
-        </div>
-        <div class="col-md col-6">
-          <div class="border p-3 rounded-lg">
-            .rounded-lg
-          </div>
-        </div>
-      </div>
-      <h4>Alt Colors</h4>
-      <div class="row text-center">
-        <div class="col-6">
-          <div class="border p-3 border-primary">
-            .border-primary
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="border p-3 border-secondary">
-            .border-secondary
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="section" id="utility">
-      <h1 class="text-primary">Utilities</h1>
-      <p>More stuff you can use on the fly.</p> 
-
-      <div class="mt-5">
-        <h4>Image Thumbnail</h4>
-        <p><code>.img-thumbnail</code></p>
-        <img src="http://placeimg.com/200/200/nature" alt="Image thumbnail..." class="img-thumbnail">
       </div>
 
-      <div class="clearfix mt-5">
-        <h4>Float</h4>
-        <p>Only float on screens larger than 767px.</p>
-        <div class="float-left mb-md-0 mb-3 text-center">
-          <img src="http://placeimg.com/200/200/animals" alt="Image thumbnail..." class="img-thumbnail mb-2">
-          <code>.float-left</code>
-        </div>
-        <div class="float-right text-center">
-          <img src="http://placeimg.com/200/200/people" alt="Image thumbnail..." class="img-thumbnail mb-2">
-          <code>.float-right</code>
-        </div>
-      </div>
-
-      <div class="mt-5">
-        <h4>Positions</h4>
-        <dl>
-          <dt><code>.fixed-top</code></dt>
-          <dd>Fixes element to the top of the page.</dd>
-          <dt><code>.fixed-bottom</code></dt>
-          <dd>Fixes element to the bottom of the page.</dd>
-          <dt><code>.sticky-top</code></dt>
-          <dd>Has the image stick to the top of the page on scroll.</dd>
-        </dl>
-      </div>
-
-    </div>
-
-    <div class="section" id="forms">
-      <h1 class="text-primary">Forms</h1>
-      <form class="card bg-faded mb-4">
-        <div class="card-header">
-          Contact Me
-        </div>
-        <fieldset class="card-content">
-          <label for="inputname">Name</label>
-          <input id="inputname" type="text" placeholder="Name">
-          <label for="inputemailaddress">Email Address</label>
-          <input id="inputemailaddress" type="email" placeholder="name@email.com">
-          <label for="inputmessage">Message</label>
-          <textarea id="inputmessage" placeholder="Tell me what's on your mind..."></textarea>
-        </fieldset>
-        <div class="card-footer">
-          <input class="button-primary" type="submit" value="Send">
-        </div>
-      </form>
-<pre><<i></i>form class="card card-content bg-faded">
+        
+      <!-- Forms
+      ---------------------------------------------------------------- -->
+      <div class="section" id="forms">
+        <h1 class="text-primary">Forms</h1>
+        <form class="card bg-faded mb-4">
+          <div class="card-header">
+            Contact Me
+          </div>
+          <fieldset class="card-content">
+            <label for="inputname">Name</label>
+            <input id="inputname" type="text" placeholder="Name">
+            <label for="inputemailaddress">Email Address</label>
+            <input id="inputemailaddress" type="email" placeholder="name@email.com">
+            <label for="inputmessage">Message</label>
+            <textarea id="inputmessage" placeholder="Tell me what's on your mind..."></textarea>
+          </fieldset>
+          <div class="card-footer">
+            <input class="button-primary" type="submit" value="Send">
+          </div>
+        </form>
+        <pre><<i></i>form class="card card-content bg-faded">
   <<i></i>h4 class="text-muted">Contact Me<<i></i>/h4>
   <<i></i>fieldset>
     <<i></i>label for="inputname">Name<<i></i>/label>
@@ -915,46 +997,50 @@
     <<i></i>/div>
   <<i></i>/fieldset>
 <<i></i>/form></pre>
-    </div>
-
-    <div class="section" id="grid">
-      <h1 class="text-primary">Grid</h1>
-      <p>This is just <a href="https://getbootstrap.com/docs/4.0/layout/grid/">Bootstrap 4's basic grid</a> that's been trimmed to be a little less chonky and edited to mimic Chota.CSS's approach to custom gutters.</p>
-      <p>Below is an example grid but I suggest you take a look at the docs linked above.</p>
-      <p>This also include orders, flex alignments, and custom padding and margins.</p>
-      <div class="row text-center mb-4">
-        <div class="col-lg-4">
-          <div class="bg-faded rounded p-3">
-            .col-lg-4
-          </div>
-        </div>
-        <div class="col-md-4 col-6">
-          <div class="bg-faded rounded p-3">
-            .col-md-4 .col-6
-          </div>
-        </div>
-        <div class="col-md-4 col-6">
-          <div class="bg-faded rounded p-3">
-            .col-4
-          </div>
-        </div>
-        <div class="col-12">
-          <div class="bg-faded rounded p-3">
-            .col-12
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="bg-faded rounded p-3">
-            .col-lg-6
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="bg-faded rounded p-3">
-            .col-lg-6
-          </div>
-        </div>
       </div>
-<pre><<i></i>div class="row text-center">
+
+        
+      <!-- Grid
+      ---------------------------------------------------------------- -->
+      <div class="section" id="grid">
+        <h1 class="text-primary">Grid</h1>
+        <p>This is just <a href="https://getbootstrap.com/docs/4.0/layout/grid/">Bootstrap 4's basic grid</a> that's
+          been trimmed to be a little less chonky and edited to mimic Chota.CSS's approach to custom gutters.</p>
+        <p>Below is an example grid but I suggest you take a look at the docs linked above.</p>
+        <p>This also include orders, flex alignments, and custom padding and margins.</p>
+        <div class="row text-center my-3">
+          <div class="col-lg-4">
+            <div class="bg-faded rounded p-3">
+              .col-lg-4
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="bg-faded rounded p-3">
+              .col-md-4 .col-6
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="bg-faded rounded p-3">
+              .col-4
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="bg-faded rounded p-3">
+              .col-12
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="bg-faded rounded p-3">
+              .col-lg-6
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="bg-faded rounded p-3">
+              .col-lg-6
+            </div>
+          </div>
+        </div>
+        <pre><<i></i>div class="row text-center">
 
   <<i></i>div class="col-lg-4">
     ...
@@ -981,22 +1067,35 @@
   <<i></i>/div>
 
 <<i></i>/div></pre>
-    </div>
+      </div>
 
-    <div class="section" id="credit">
-      <h1 class="text-primary">Credits</h1>
-      <ul class="fa-ul mb-5">
-        <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://jenil.github.io/chota/">Chota CSS Framework</a></li>
-        <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://milligram.io/">Milligram CSS Framework</a></li>
-        <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://getbootstrap.com/docs/4.6/getting-started/introduction/">Boostrap 4</a></li>
-        <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://fontawesome.com/">Font Awesome 5 Icons</a></li>
-        <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://fonts.google.com/">Google Fonts</a> (Montserrat &amp; Comfortaa)</li>
-        <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="http://placeimg.com/">Placeimg</a> (For placeholders)</li>
-        <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://github.com/">Github</a> (Hosting!)</li>
-        <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a href="https://unsplash.com/photos/b9xUX3HR5nQ?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink">Christiann Koepke</a> (Header Image)</li>
-      </ul>
+        
+      <!-- Credits
+      ---------------------------------------------------------------- -->
+      <div class="section" id="credit">
+        <h1 class="text-primary">Credits</h1>
+        <ul class="fa-ul mb-5">
+          <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a
+              href="https://jenil.github.io/chota/">Chota CSS Framework</a></li>
+          <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a
+              href="https://milligram.io/">Milligram CSS Framework</a></li>
+          <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a
+              href="https://getbootstrap.com/docs/4.6/getting-started/introduction/">Boostrap 4</a></li>
+          <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a
+              href="https://fontawesome.com/">Font Awesome 5 Icons</a></li>
+          <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a
+              href="https://fonts.google.com/">Google Fonts</a> (Montserrat &amp; Comfortaa)</li>
+          <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a
+              href="http://placeimg.com/">Placeimg</a> (For placeholders)</li>
+          <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a
+              href="https://github.com/">Github</a> (Hosting!)</li>
+          <li><span class="fa-li"><i class="fal fa-chevron-right" aria-hidden="true"></i></span><a
+              href="https://unsplash.com/photos/b9xUX3HR5nQ?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink">Christiann
+              Koepke</a> (Header Image)</li>
+        </ul>
+      </div>
+
     </div>
-    
-  </div>
+  </div>  
 </body>
 </html>
