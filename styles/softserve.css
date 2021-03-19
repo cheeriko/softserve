@@ -315,6 +315,7 @@ a:visited {
   color: var(--link-color);
   text-decoration: none;
   background-color: transparent;
+  font-size: inherit;
   transition: color var(--transition-time) ease-in-out;
 }
 
@@ -1281,7 +1282,6 @@ ul.pagination li a.active{
 }
 
 .navbar .logo a{
-  font-size: var(--navbar-logo-font-size);
   color: var(--navbar-logo-font-color);
 }
 
