@@ -95,7 +95,7 @@
   /* Font Family */
   --font-family-body: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   --font-family-display: "Comfortaa", var(--font-family-body);
-  --font-family-code: monaco, "Consolas", "Lucida Console", monospace;
+  --font-family-code: "Monaco", "Consolas", "Lucida Console", monospace;
 
   
   /* Font Weight */
@@ -179,7 +179,7 @@
   /* Navbar Logo Styles */
   --navbar-logo-font-color: var(--navbar-font-color-hover);
   --navbar-logo-font-color-hover: var(--navbar-font-color);
-  --navbar-logo-font-size: var(--h4-font-size);
+  --navbar-logo-font-size: var(--h5-font-size);
 
   /* Navbar Border Styles */
   --navbar-border-width: var(--border-width);
@@ -225,14 +225,6 @@
   --xl-break: 1200px;
 
 }
-/* ================================================================ /
-  Font Family Import
-    You can also link this, but i find it easier to keep up with as
-    an import!
-================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@300;400;500&display=swap');
-
-
 /* ================================================================ /
   Reset Elements
 ================================================================== */
@@ -1289,6 +1281,7 @@ ul.pagination li a.active{
 }
 
 .navbar .logo a{
+  font-size: var(--navbar-logo-font-size);
   color: var(--navbar-logo-font-color);
 }
 
@@ -1308,6 +1301,7 @@ ul.pagination li a.active{
   position: relative;
   color: var(--navbar-font-color);
   padding: var(--spacer-2) var(--spacer-4);
+  font-family: var(--navbar-font-family);
   cursor: pointer;
   transition: 
     color var(--transition-time) ease-in-out,
@@ -1358,8 +1352,14 @@ ul.pagination li a.active{
 /* <3 Navbar Dropdown
 ================================================================== */
 
+
+/* Navbar dropdown links */
+.navbar .dropdown > .dropdown-menu .nav-link {
+  font-size: 90%;
+}
+
 /* Navbar dropdown link icons */
-.navbar .dropdown > .nav-link i{
+.navbar .dropdown > .nav-link .nav-icon{
   order: 1;
   font-size: var(--font-size-sm);
   margin-left: var(--spacer-1);
@@ -1398,7 +1398,6 @@ ul.pagination li a.active{
   }
 
   .navbar .dropdown > .dropdown-menu .nav-link {
-    font-size: 90%;
     padding:  var(--spacer-2) var(--spacer-3);
     border-top: var(--navbar-border-width) var(--navbar-border-style) var(--navbar-border-color);
     display: block;
